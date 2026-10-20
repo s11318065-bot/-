@@ -1,0 +1,1608 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>大清愛新覺羅家的吃瓜日常：奏摺秘密與反差萌實錄</title>
+
+  <!-- Google Fonts: 典雅明體與毛筆書法字體 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+TC:wght@400;500;600;700;900&family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Anime.js CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cinnabar: '#BA261A',      // 硃砂紅
+            cinnabarlight: '#E04A3F',
+            imperial: '#E5A93B',      // 皇家明黃
+            palacegold: '#C2831B',    // 紫禁宮金
+            ink: '#231F1D',           // 徽墨黑
+            stoneblue: '#24486E',     // 霽藍石青
+            celadon: '#2F614E',       // 松石綠
+            paper: '#F7F2E7',         // 仿古宣紙底
+            papercard: '#FFFDF9',     // 奏摺內頁白
+            paperyellow: '#F4ECD8',   // 密摺封套黃
+            bordercream: '#E2D8C0',   // 宣紙裝裱邊
+          },
+          fontFamily: {
+            serif: ['"Noto Serif TC"', 'serif'],
+            zen: ['"Zen Maru Gothic"', '"Noto Serif TC"', 'sans-serif'],
+            brush: ['"Ma Shan Zheng"', 'cursive', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #F6F0E4;
+      /* 典雅宣紙星芒微點底紋 */
+      background-image: 
+        radial-gradient(#DECFA6 1px, transparent 1px),
+        radial-gradient(#E8DEBA 1px, #F6F0E4 1px);
+      background-size: 32px 32px;
+      background-position: 0 0, 16px 16px;
+      color: #231F1D;
+      font-family: 'Noto Serif TC', serif;
+      scroll-behavior: smooth;
+    }
+
+    /* 頂部與全域清代紫禁城精細工筆宮殿建築底圖：全寬滿版延展至左右最邊邊 */
+    .palace-roof-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      right: 0;
+      height: 100%;
+      min-height: 580px;
+      opacity: 0.45;
+      pointer-events: none;
+      z-index: 1;
+      background-repeat: no-repeat;
+      background-position: bottom center;
+      background-size: 100% 100%;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1920 600' preserveAspectRatio='none'%3E%3Cdefs%3E%3ClinearGradient id='sky' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0%25' stop-color='%23F5D7A1' stop-opacity='0.6'/%3E%3Cstop offset='45%25' stop-color='%23F7E5C1' stop-opacity='0.25'/%3E%3Cstop offset='100%25' stop-color='%23F6F0E4' stop-opacity='0'/%3E%3C/linearGradient%3E%3ClinearGradient id='goldTile' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0%25' stop-color='%23F2BE48'/%3E%3Cstop offset='100%25' stop-color='%23C98616'/%3E%3C/linearGradient%3E%3ClinearGradient id='wallRed' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0%25' stop-color='%239E2218'/%3E%3Cstop offset='100%25' stop-color='%2370140D'/%3E%3C/linearGradient%3E%3ClinearGradient id='marble' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0%25' stop-color='%23FFFDF7'/%3E%3Cstop offset='100%25' stop-color='%23DFD6C3'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='1920' height='600' fill='url(%23sky)'/%3E%3C!-- 兩側無限延伸紅宮牆與金黃琉璃瓦頂 --%3E%3Cpath d='M0 340 L500 340 L500 600 L0 600 Z' fill='url(%23wallRed)' opacity='0.55'/%3E%3Cpath d='M0 326 L500 326 L500 344 L0 344 Z' fill='url(%23goldTile)' stroke='%238F5605' stroke-width='1.5'/%3E%3Cpath d='M1420 340 L1920 340 L1920 600 L1420 600 Z' fill='url(%23wallRed)' opacity='0.55'/%3E%3Cpath d='M1420 326 L1920 326 L1920 344 L1420 344 Z' fill='url(%23goldTile)' stroke='%238F5605' stroke-width='1.5'/%3E%3C!-- 遠景連綿宮殿輪廓（貫通全寬度） --%3E%3Cpath d='M0 320 L160 305 L220 270 L320 270 L370 305 L520 295 L600 250 L740 250 L810 295 L1110 295 L1180 250 L1320 250 L1400 295 L1550 305 L1600 270 L1700 270 L1760 305 L1920 320 L1920 600 L0 600 Z' fill='%23CBA772' opacity='0.35'/%3E%3C!-- 太和殿正脊與重簷殿頂（居中巍峨） --%3E%3Cg transform='translate(960, 260)'%3E%3C!-- 上層殿頂 --%3E%3Cpath d='M-460 40 Q-360 26 -240 18 L-180 -22 Q0 -32 180 -22 L240 18 Q360 26 460 40 C430 55 350 64 0 64 C-350 64 -430 55 -460 40 Z' fill='url(%23goldTile)' stroke='%238F5605' stroke-width='2'/%3E%3C!-- 正脊與鴟吻 --%3E%3Cpath d='M-180 -22 Q0 -32 180 -22 L185 -38 C185 -50 170 -52 165 -34 L-165 -34 C-170 -52 -185 -50 -185 -38 Z' fill='%23C98616' stroke='%238F5605' stroke-width='2'/%3E%3C!-- 簷下斗栱層 --%3E%3Crect x='-340' y='60' width='680' height='26' fill='%23224B40' stroke='%23D4AF37' stroke-width='1.5'/%3E%3Cpath d='M-320 60 L-320 86 M-260 60 L-260 86 M-200 60 L-200 86 M-140 60 L-140 86 M-80 60 L-80 86 M-20 60 L-20 86 M40 60 L40 86 M100 60 L100 86 M160 60 L160 86 M220 60 L220 86 M280 60 L280 86 M320 60 L320 86' stroke='%23E5A93B' stroke-width='3'/%3E%3C!-- 下層飛簷金瓦 --%3E%3Cpath d='M-620 125 Q-480 102 -340 84 L340 84 Q480 102 620 125 C580 148 440 158 0 158 C-440 158 -580 148 -620 125 Z' fill='url(%23goldTile)' stroke='%238F5605' stroke-width='2.5'/%3E%3C!-- 殿身朱紅金柱 --%3E%3Crect x='-500' y='154' width='1000' height='100' fill='url(%23wallRed)' stroke='%234A0D08' stroke-width='3'/%3E%3C!-- 門扉隔扇 --%3E%3Cg fill='%235A0F09' stroke='%23E5A93B' stroke-width='1.5'%3E%3Crect x='-80' y='170' width='160' height='84'/%3E%3Crect x='-260' y='170' width='150' height='84'/%3E%3Crect x='110' y='170' width='150' height='84'/%3E%3Crect x='-440' y='170' width='150' height='84'/%3E%3Crect x='290' y='170' width='150' height='84'/%3E%3C/g%3E%3C!-- 漢白玉三層須彌座台基（往左右完全延伸鋪展） --%3E%3Cpath d='M-720 252 L720 252 L690 280 L-690 280 Z' fill='url(%23marble)' stroke='%23B5A993' stroke-width='2'/%3E%3Cpath d='M-820 280 L820 280 L780 315 L-780 315 Z' fill='url(%23marble)' stroke='%23B5A993' stroke-width='2'/%3E%3Cpath d='M-940 315 L940 315 L900 345 L-900 345 Z' fill='url(%23marble)' stroke='%23B5A993' stroke-width='2'/%3E%3C!-- 御路雕龍石階丹陛 --%3E%3Cpath d='M-140 252 L140 252 L180 345 L-180 345 Z' fill='%23C5BCAB' stroke='%239C907A' stroke-width='2'/%3E%3Cpath d='M-80 252 L80 252 L100 345 L-100 345 Z' fill='%239E927C' stroke='%23E5A93B' stroke-dasharray='5,5' stroke-width='2'/%3E%3C/g%3E%3C!-- 宮殿兩側祥雲繚繞（貼合左右邊緣） --%3E%3Cg fill='%23FFFDF7' opacity='0.75'%3E%3Cpath d='M0 420 C100 380 220 380 280 420 C320 400 390 400 420 435 C480 415 540 435 560 470 L0 470 Z'/%3E%3Cpath d='M1360 420 C1420 380 1540 380 1640 420 C1700 395 1780 395 1830 430 C1870 415 1900 435 1920 455 L1920 470 L1360 470 Z'/%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    /* 古籍典藏裝裱精細外框 */
+    .retro-border {
+      border: 1.5px solid #DFCFA8;
+      box-shadow: 
+        inset 0 0 0 4px #FFFDF8,
+        0 8px 30px -6px rgba(78, 52, 22, 0.09);
+    }
+
+    /* 皇帝頭像宮廷金鑲玉邊框 */
+    .avatar-frame {
+      position: relative;
+      width: 86px;
+      height: 86px;
+      border-radius: 9999px;
+      padding: 3.5px;
+      background: linear-gradient(135deg, #FAD77B 0%, #BA261A 50%, #C2831B 100%);
+      box-shadow: 0 6px 18px rgba(186, 38, 26, 0.28), inset 0 0 5px rgba(255, 255, 255, 0.8);
+      flex-shrink: 0;
+      transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    .avatar-frame:hover {
+      transform: scale(1.08) rotate(3deg);
+    }
+    .avatar-inner {
+      width: 100%;
+      height: 100%;
+      border-radius: 9999px;
+      overflow: hidden;
+      border: 2px solid #FFFDF9;
+      background-color: #F6EDE0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: inset 0 2px 6px rgba(0,0,0,0.12);
+    }
+
+    /* 硃批雙圈印章 */
+    .imperial-seal {
+      position: absolute;
+      top: 1.2rem;
+      right: 1.2rem;
+      width: 106px;
+      height: 106px;
+      border: 3.5px double #BA261A;
+      border-radius: 50%;
+      color: #BA261A;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Ma Shan Zheng', 'Noto Serif TC', serif;
+      font-size: 1.25rem;
+      font-weight: 900;
+      line-height: 1.2;
+      text-align: center;
+      transform: scale(0) rotate(-15deg);
+      opacity: 0;
+      pointer-events: none;
+      background: rgba(255, 253, 249, 0.96);
+      box-shadow: inset 0 0 0 2px #BA261A, 0 8px 20px rgba(186, 38, 26, 0.35);
+      z-index: 25;
+    }
+
+    /* 奏摺魚尾線裝中縫 */
+    .fish-tail {
+      position: relative;
+    }
+    .fish-tail::after {
+      content: "§ 欽定大清內閣密旨奏匣・敬謹批覽 §";
+      display: block;
+      text-align: center;
+      font-size: 0.72rem;
+      color: #93826D;
+      letter-spacing: 0.35em;
+      margin: 2.2rem auto 0;
+      border-top: 1px dashed #D5C7B0;
+      border-bottom: 1px dashed #D5C7B0;
+      padding: 5px 0;
+      max-width: 340px;
+    }
+
+    /* 懸浮回頂端印章按鈕 */
+    #back-to-top {
+      transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    #back-to-top:hover {
+      transform: scale(1.1) translateY(-3px);
+      box-shadow: 0 10px 25px rgba(186, 38, 26, 0.4);
+    }
+
+    /* 文物微縮圖 hover */
+    .artifact-thumb {
+      transition: all 0.3s ease;
+      cursor: zoom-in;
+    }
+    .artifact-thumb:hover {
+      filter: brightness(1.02);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(40, 30, 20, 0.12);
+    }
+  </style>
+</head>
+
+<body class="min-h-screen text-ink antialiased selection:bg-cinnabar selection:text-white relative">
+
+  <!-- 頂部皇家色彩織錦條飾 -->
+  <div class="h-2.5 w-full bg-gradient-to-r from-cinnabar via-imperial via-stoneblue to-cinnabar"></div>
+
+  <!-- 導航列：支援點擊即刻回到最頂端大標題 -->
+  <nav class="sticky top-0 z-40 backdrop-blur-md bg-paper/95 border-b border-bordercream shadow-sm transition-all duration-300">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      
+      <!-- 點選立即平滑回到大清愛新覺羅家的吃瓜日常 -->
+      <a href="#hero-section" id="nav-brand" class="flex items-center space-x-3 group cursor-pointer" title="點擊回到「大清愛新覺羅家的吃瓜日常」首頁">
+        <span class="w-10 h-10 rounded-full bg-gradient-to-tr from-emerald-600 via-cinnabar to-imperial group-hover:from-emerald-500 group-hover:to-cinnabar p-0.5 flex items-center justify-center shadow-sm border border-imperial/60 transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110">
+          <span class="w-full h-full rounded-full bg-[#FFFDF9] flex items-center justify-center text-xl shadow-inner select-none">
+            🍉
+          </span>
+        </span>
+        <div class="flex flex-col text-left">
+          <span class="font-serif font-black tracking-wider text-base sm:text-lg text-ink group-hover:text-cinnabar transition-colors">
+            大清愛新覺羅家的吃瓜日常
+          </span>
+          <span class="text-[10px] text-stone-500 tracking-widest hidden sm:block font-serif">
+            ▲ 點擊返抵卷首・御覽吃瓜起居注
+          </span>
+        </div>
+      </a>
+
+      <div class="hidden md:flex items-center space-x-6 text-sm font-medium text-stone-700">
+        <a href="#system" class="hover:text-cinnabar transition-colors">密摺制度科普</a>
+        <a href="#scrolly-section" class="hover:text-cinnabar transition-colors">一件密摺的漂流</a>
+        <a href="#emperors" class="hover:text-cinnabar transition-colors">四大帝王御容與檔案</a>
+        <a href="#battle" class="hover:text-cinnabar transition-colors">雍乾審美修羅場</a>
+        <a href="#sources" class="hover:text-cinnabar transition-colors">文獻出處</a>
+      </div>
+
+      <a href="#emperors" class="px-4 py-1.5 rounded-full bg-cinnabar hover:bg-red-800 text-white text-xs sm:text-sm font-bold tracking-wider transition-all shadow-sm active:scale-95">
+        御覽吃瓜起居注 📜
+      </a>
+    </div>
+  </nav>
+
+  <header id="hero-section" class="relative overflow-hidden py-14 sm:py-20 border-b border-bordercream w-full">
+    <!-- 紫禁城宮殿剪影背景層：全幅寬度至左右邊緣 -->
+    <div class="palace-roof-bg w-full"></div>
+
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center relative z-10">
+      
+      <div id="hero-badge" class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-papercard/90 backdrop-blur-sm border border-cinnabar/40 text-cinnabar text-xs sm:text-sm font-bold tracking-widest mb-6 opacity-0 shadow-sm">
+        <span class="w-2 h-2 rounded-full bg-cinnabar animate-ping"></span>
+        紫禁城內廷機密起居注・故宮原檔考證版
+      </div>
+
+      <!-- 標題增設古典柔光襯底，確保與建築底圖相映清晰 -->
+      <div class="inline-block py-3 px-6 sm:px-10 rounded-3xl bg-paper/80 backdrop-blur-[2px] mb-4 border border-bordercream/70 shadow-sm">
+        <h1 id="hero-title" class="text-3xl sm:text-5xl md:text-6xl font-black text-ink tracking-widest leading-tight opacity-0 font-serif drop-shadow-sm">
+          大清愛新覺羅家的吃瓜日常
+          <span class="text-cinnabar font-bold text-2xl sm:text-4xl md:text-5xl block mt-2.5 tracking-wider font-serif">
+            奏摺秘密與反差萌實錄
+          </span>
+        </h1>
+      </div>
+
+      <p id="hero-sub" class="text-stone-800 max-w-2xl mx-auto text-sm sm:text-base md:text-lg leading-relaxed mb-8 font-normal opacity-0 font-serif bg-paper/60 backdrop-blur-[1px] p-2 rounded-xl">
+        歷史課本不教、清宮劇不敢拍的真實人性！翻開故宮珍藏硃批密折與精細工筆御容，這群統治天下的愛新覺羅氏，私底下其實是極限加班的社畜、跨海催問芒果的吃貨、換裝Cosplay達人與瘋狂毀字畫的蓋章怪。
+      </p>
+
+      <!-- 快捷皇帝頭像列 -->
+      <div id="hero-avatars" class="flex flex-wrap justify-center items-center gap-4 sm:gap-6 mb-8 opacity-0">
+        
+        <!-- 康熙 -->
+        <a href="#card-kangxi" class="group flex flex-col items-center">
+          <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full p-1 bg-gradient-to-tr from-imperial to-cinnabar shadow-md group-hover:scale-110 transition-transform">
+            <div class="w-full h-full rounded-full overflow-hidden bg-[#F6EDE0] border border-white">
+              <svg viewBox="0 0 100 100" class="w-full h-full">
+                <radialGradient id="h-kx" cx="50%" cy="40%" r="60%">
+                  <stop offset="0%" stop-color="#FFF5E4"/><stop offset="100%" stop-color="#E2CCA4"/>
+                </radialGradient>
+                <rect width="100" height="100" fill="url(#h-kx)"/>
+                <path d="M12 100 Q30 76 50 76 Q70 76 88 100 Z" fill="#E89B1F"/>
+                <ellipse cx="50" cy="54" rx="16" ry="21" fill="#F8E1C7"/>
+                <path d="M41 49 Q45 47 48 49 M52 49 Q55 47 59 49" stroke="#3D200E" stroke-width="1.8" fill="none"/>
+                <circle cx="45" cy="53" r="1.8" fill="#221108"/><circle cx="55" cy="53" r="1.8" fill="#221108"/>
+                <path d="M45 68 Q50 77 55 68" fill="#421F0D"/>
+                <path d="M26 42 Q50 26 74 42 Q50 36 26 42 Z" fill="#201A18"/>
+                <path d="M30 38 Q50 16 70 38 Q50 32 30 38 Z" fill="#B32417"/>
+                <circle cx="50" cy="12" r="3.2" fill="#F1C40F"/>
+              </svg>
+            </div>
+          </div>
+          <span class="text-xs font-bold mt-1.5 text-stone-700 group-hover:text-cinnabar">康熙帝</span>
+        </a>
+
+        <!-- 雍正 -->
+        <a href="#card-yongzheng" class="group flex flex-col items-center">
+          <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full p-1 bg-gradient-to-tr from-cinnabar to-amber-700 shadow-md group-hover:scale-110 transition-transform">
+            <div class="w-full h-full rounded-full overflow-hidden bg-[#F3E8DC] border border-white">
+              <svg viewBox="0 0 100 100" class="w-full h-full">
+                <radialGradient id="h-yz" cx="50%" cy="40%" r="60%">
+                  <stop offset="0%" stop-color="#FBF0E4"/><stop offset="100%" stop-color="#D9C2A7"/>
+                </radialGradient>
+                <rect width="100" height="100" fill="url(#h-yz)"/>
+                <path d="M12 100 Q30 75 50 75 Q70 75 88 100 Z" fill="#992318"/>
+                <ellipse cx="50" cy="53" rx="15" ry="21" fill="#F7DEC4"/>
+                <path d="M40 48 L48 48 M52 48 L60 48" stroke="#221108" stroke-width="2.2"/>
+                <ellipse cx="44" cy="52" rx="1.8" ry="1.4" fill="#1C0D05"/><ellipse cx="56" cy="52" rx="1.8" ry="1.4" fill="#1C0D05"/>
+                <path d="M46 67 Q50 75 54 67" fill="#2E160A"/>
+                <path d="M28 41 Q50 25 72 41 Q50 35 28 41 Z" fill="#181514"/>
+                <path d="M32 37 Q50 15 68 37 Q50 31 32 37 Z" fill="#9C1C13"/>
+                <circle cx="50" cy="11" r="3" fill="#E5A93C"/>
+              </svg>
+            </div>
+          </div>
+          <span class="text-xs font-bold mt-1.5 text-stone-700 group-hover:text-cinnabar">雍正帝</span>
+        </a>
+
+        <!-- 乾隆 -->
+        <a href="#card-qianlong" class="group flex flex-col items-center">
+          <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full p-1 bg-gradient-to-tr from-stoneblue to-imperial shadow-md group-hover:scale-110 transition-transform">
+            <div class="w-full h-full rounded-full overflow-hidden bg-[#FAF2E6] border border-white">
+              <svg viewBox="0 0 100 100" class="w-full h-full">
+                <radialGradient id="h-ql" cx="50%" cy="40%" r="60%">
+                  <stop offset="0%" stop-color="#FFF8ED"/><stop offset="100%" stop-color="#E5CFAC"/>
+                </radialGradient>
+                <rect width="100" height="100" fill="url(#h-ql)"/>
+                <path d="M12 100 Q30 74 50 74 Q70 74 88 100 Z" fill="#EAA424"/>
+                <ellipse cx="50" cy="53" rx="16" ry="21" fill="#FCE4CC"/>
+                <path d="M41 48 Q45 46 48 48 M52 48 Q55 46 59 48" stroke="#3D200E" stroke-width="1.8" fill="none"/>
+                <circle cx="45" cy="52" r="1.8" fill="#1C0F08"/><circle cx="55" cy="52" r="1.8" fill="#1C0F08"/>
+                <path d="M47 67 Q50 72 53 67" fill="#4A2614"/>
+                <path d="M26 41 Q50 24 74 41 Q50 35 26 41 Z" fill="#1D1917"/>
+                <path d="M30 37 Q50 15 70 37 Q50 31 30 37 Z" fill="#C22718"/>
+                <circle cx="50" cy="8" r="3.2" fill="#F1C40F"/>
+              </svg>
+            </div>
+          </div>
+          <span class="text-xs font-bold mt-1.5 text-stone-700 group-hover:text-cinnabar">乾隆帝</span>
+        </a>
+
+        <!-- 嘉慶 -->
+        <a href="#card-jiaqing" class="group flex flex-col items-center">
+          <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full p-1 bg-gradient-to-tr from-celadon to-imperial shadow-md group-hover:scale-110 transition-transform">
+            <div class="w-full h-full rounded-full overflow-hidden bg-[#EFF4EC] border border-white">
+              <svg viewBox="0 0 100 100" class="w-full h-full">
+                <radialGradient id="h-jq" cx="50%" cy="40%" r="60%">
+                  <stop offset="0%" stop-color="#F4FAF0"/><stop offset="100%" stop-color="#C7DAC4"/>
+                </radialGradient>
+                <rect width="100" height="100" fill="url(#h-jq)"/>
+                <path d="M12 100 Q30 75 50 75 Q70 75 88 100 Z" fill="#2E5A44"/>
+                <ellipse cx="50" cy="53" rx="16" ry="21" fill="#F7DEC6"/>
+                <path d="M41 49 L48 49 M52 49 L59 49" stroke="#331A0C" stroke-width="2"/>
+                <circle cx="45" cy="53" r="1.8" fill="#1A110B"/><circle cx="55" cy="53" r="1.8" fill="#1A110B"/>
+                <path d="M46 67 Q50 74 54 67" fill="#331A0C"/>
+                <path d="M27 41 Q50 25 73 41 Q50 35 27 41 Z" fill="#171816"/>
+                <path d="M31 37 Q50 16 69 37 Q50 31 31 37 Z" fill="#992318"/>
+                <circle cx="50" cy="10" r="3" fill="#D69722"/>
+              </svg>
+            </div>
+          </div>
+          <span class="text-xs font-bold mt-1.5 text-stone-700 group-hover:text-cinnabar">嘉慶帝</span>
+        </a>
+
+      </div>
+
+      <!-- 標籤組 -->
+      <div id="hero-tags" class="flex flex-wrap justify-center gap-2 max-w-3xl mx-auto opacity-0 text-xs mb-8">
+        <span class="px-3 py-1 rounded-lg bg-papercard border border-bordercream font-bold shadow-sm">🥭 康熙跨海催芒果</span>
+        <span class="px-3 py-1 rounded-lg bg-papercard border border-bordercream font-bold shadow-sm">☕ 西洋巧克力嫌苦案</span>
+        <span class="px-3 py-1 rounded-lg bg-papercard border border-bordercream font-bold shadow-sm">🔥 朕就是這樣漢子</span>
+        <span class="px-3 py-1 rounded-lg bg-papercard border border-bordercream font-bold shadow-sm">🧑‍🦱 雍正假髮刺虎照</span>
+        <span class="px-3 py-1 rounded-lg bg-papercard border border-bordercream font-bold shadow-sm">🏺 乾隆17釉色瓷母</span>
+        <span class="px-3 py-1 rounded-lg bg-papercard border border-bordercream font-bold shadow-sm">✍️ 嘉慶打回重寫字太醜</span>
+      </div>
+
+      <!-- 展開大清奏摺箱：全新 Anime.js 互動特效按鈕與實體箱盒 -->
+      <div class="mt-6 flex flex-col items-center">
+        
+        <button id="btn-open-box" onclick="triggerOpenMemorialBox()" class="group relative px-7 py-3 rounded-2xl bg-gradient-to-r from-cinnabar via-red-800 to-cinnabar text-white font-serif font-black tracking-widest text-sm sm:text-base shadow-lg hover:shadow-2xl transition-all active:scale-95 border-2 border-imperial flex items-center gap-3">
+          <!-- 密摺鎖印圖示 -->
+          <span id="box-lock-icon" class="text-lg transition-transform group-hover:rotate-12">🔐</span>
+          <span>展開大清奏摺箱</span>
+          <span id="box-arrow-icon" class="text-xs transition-transform group-hover:translate-y-1">▼</span>
+        </button>
+
+        <!-- 虛擬奏摺箱展開時的動態金光與卷軸展示區 -->
+        <div id="box-unfolding-container" class="w-full max-w-md mt-4 overflow-hidden h-0 opacity-0 transition-all">
+          <div class="bg-paperyellow border-2 border-palacegold p-4 rounded-xl shadow-inner text-center font-serif text-xs text-stone-700 relative">
+            <div class="w-full py-1 border-b border-dashed border-stone-300 font-bold text-cinnabar flex items-center justify-center gap-2">
+              <span>📜 奉天承運 密摺鎖匣已奉旨開啟</span>
+            </div>
+            <p class="mt-2 text-stone-600">
+              御賜鐵鑰親啟！四朝硃筆御批原件與真性情秘辛，正由大內侍衛兼程馳送——
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 py-16 space-y-24 relative z-10">
+
+    <!-- 密摺制度小科普 -->
+    <section id="system" class="scroll-mt-20">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="text-cinnabar font-bold tracking-widest text-xs uppercase font-serif">Imperial Confidential Memorials</span>
+        <h2 class="text-3xl font-black text-ink mt-1 font-serif">【密摺制度小科普】皇帝為何會被逼成「頂級社畜」？</h2>
+        <div class="w-16 h-1 bg-imperial mx-auto mt-3 rounded-full"></div>
+        <p class="text-stone-700 text-sm sm:text-base mt-4 leading-relaxed font-serif">
+          在清代以前，奏章必須經過內閣層層轉呈，官僚體系全是套話廢話。康熙為了打破官場資訊壟斷，創設親自發鑰匙、皇帝親啟的「特務式單線直達通訊」——<strong>密摺制度</strong>。
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <div class="system-card bg-papercard rounded-2xl p-6 border border-bordercream shadow-sm hover:shadow-md transition-shadow relative overflow-hidden">
+          <div class="w-10 h-10 rounded-xl bg-imperial/20 text-palacegold font-black flex items-center justify-center text-xl mb-4 font-serif">
+            壹
+          </div>
+          <h3 class="font-bold text-lg text-ink mb-2 font-serif">機密鐵匣與單線鑰匙</h3>
+          <p class="text-xs sm:text-sm text-stone-600 leading-relaxed">
+            皇帝特賜特製鐵鎖皮匣，一把鑰匙在總督巡撫手中，另一把由皇帝親自佩戴。奏折封入匣中由專差日夜兼程直奔內廷，任何宰相與王公都無權窺視拆封。
+          </p>
+          <div class="mt-4 pt-3 border-t border-dashed border-stone-200 text-[11px] text-stone-500 font-mono">
+            ★ 相當於清代最高機密的端到端加密通訊 (E2EE)
+          </div>
+        </div>
+
+        <div class="system-card bg-papercard rounded-2xl p-6 border border-bordercream shadow-sm hover:shadow-md transition-shadow relative overflow-hidden">
+          <div class="w-10 h-10 rounded-xl bg-cinnabar/15 text-cinnabar font-black flex items-center justify-center text-xl mb-4 font-serif">
+            貳
+          </div>
+          <h3 class="font-bold text-lg text-ink mb-2 font-serif">硃砂御筆親自批閱</h3>
+          <p class="text-xs sm:text-sm text-stone-600 leading-relaxed">
+            密摺內容無所不包：天氣雨雪、糧價高低、官員八卦、海外奇物，甚至私人請安。皇帝必須親自持硃砂筆一行行手寫回覆，不得由翰林或太監代筆。
+          </p>
+          <div class="mt-4 pt-3 border-t border-dashed border-stone-200 text-[11px] text-stone-500 font-mono">
+            ★ 雍正一人親批超過 41,000 件奏摺，字數超過千萬字
+          </div>
+        </div>
+
+        <div class="system-card bg-papercard rounded-2xl p-6 border border-bordercream shadow-sm hover:shadow-md transition-shadow relative overflow-hidden">
+          <div class="w-10 h-10 rounded-xl bg-stoneblue/15 text-stoneblue font-black flex items-center justify-center text-xl mb-4 font-serif">
+            參
+          </div>
+          <h3 class="font-bold text-lg text-ink mb-2 font-serif">真性情無保留流露</h3>
+          <p class="text-xs sm:text-sm text-stone-600 leading-relaxed">
+            正因是「一對一私人私密聊天室」，皇帝在公文裡徹底卸下九五之尊的偶像包袱。高興了讚嘆「好漢子」，生氣了直接在折子痛罵「草包」、「糊塗」，留下最真實的帝王手記。
+          </p>
+          <div class="mt-4 pt-3 border-t border-dashed border-stone-200 text-[11px] text-stone-500 font-mono">
+            ★ 故宮文獻庫至今典藏數十萬件鮮活硃批原件
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 替換原有破版Sticky區塊：改為完整響應式的「密折時空四聯屏」排版 -->
+    <section id="scrolly-section" class="scroll-mt-20">
+      <div class="text-center max-w-3xl mx-auto mb-10">
+        <span class="text-cinnabar font-bold tracking-widest text-xs uppercase font-serif">Journey of an Imperial Secret Memorial</span>
+        <h2 class="text-2xl sm:text-3xl font-black text-ink mt-1 font-serif">【一件密摺的奇幻漂流】大清私密直通車的四道工序</h2>
+        <div class="w-16 h-1 bg-palacegold mx-auto mt-3 rounded-full"></div>
+        <p class="text-stone-700 text-sm sm:text-base mt-4 font-serif leading-relaxed px-2">
+          跳過宰相九卿！一份邊陲吃瓜奏報，是如何在二十四小時內從總督私囊直抵皇帝深夜龍案的完整路徑：
+        </p>
+
+        <!-- 行動端貼心滑動手勢提示（僅在手機螢幕顯示） -->
+        <div class="sm:hidden mt-3 inline-flex items-center gap-1.5 text-xs text-cinnabar/80 font-serif bg-cinnabar/10 px-3 py-1 rounded-full">
+          <span>👈 左右滑動翻閱密摺流程 👉</span>
+        </div>
+      </div>
+
+      <!-- 響應式佈局：桌面端 4 列並排、平板 2 列網格、手機端支援水平吸附滑動長卷 -->
+      <div class="relative">
+        <div id="memorial-scroll-container" class="flex sm:grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 overflow-x-auto sm:overflow-visible pb-4 sm:pb-0 px-2 sm:px-0 snap-x snap-mandatory scroll-smooth no-scrollbar">
+          
+          <!-- 第一折 -->
+          <div class="min-w-[85%] sm:min-w-0 snap-center bg-papercard retro-border rounded-2xl p-4 sm:p-5 flex flex-col justify-between hover:shadow-lg transition-all duration-300 hover:-translate-y-1 h-full">
+            <div>
+              <div class="w-full aspect-[16/9] max-h-32 rounded-xl bg-[#F8F2E6] border border-bordercream mb-4 flex items-center justify-center p-2 relative overflow-hidden">
+                <svg viewBox="0 0 100 80" class="w-full h-full max-h-24">
+                  <rect width="100" height="80" rx="4" fill="#F4EDE0"/>
+                  <path d="M0 65 Q50 55 100 65 L100 80 L0 80 Z" fill="#C5B496"/>
+                  <circle cx="50" cy="35" r="20" fill="#FDEBD0"/>
+                  <text x="50" y="42" font-size="24" text-anchor="middle">🐎</text>
+                  <rect x="25" y="60" width="50" height="12" rx="3" fill="#BA261A"/>
+                  <text x="50" y="69" font-family="'Noto Serif TC', serif" font-size="7" font-weight="900" fill="#FFF" text-anchor="middle">六百里加急</text>
+                </svg>
+              </div>
+              <div class="flex flex-wrap items-center justify-between gap-1 mb-2">
+                <span class="px-2.5 py-0.5 rounded-full bg-palacegold/20 text-palacegold font-serif font-black text-xs">第一折・萬里馳送</span>
+                <span class="text-[11px] text-stone-500 font-mono">寅時・晨光微晞</span>
+              </div>
+              <h3 class="text-base font-bold font-serif text-ink mb-1.5 leading-snug">總督上鎖：專匣八百里加急直馳內廷</h3>
+              <p class="text-xs text-stone-600 leading-relaxed font-serif">
+                地方督撫將奏摺裝入鐵皮匣中扣上西洋雙開銅鎖，由專差腰懸信牌換馬不換人疾馳進京，嚴禁任何人中途私拆。
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-dashed border-bordercream text-[11px] text-stone-600 font-serif bg-paperyellow/50 p-2.5 rounded-lg">
+              <strong>💡 八卦：</strong>覺羅滿保送臺灣芒果時，一路加蓋油布保溫，生怕果子爛了挨批！
+            </div>
+          </div>
+
+          <!-- 第二折 -->
+          <div class="min-w-[85%] sm:min-w-0 snap-center bg-papercard retro-border rounded-2xl p-4 sm:p-5 flex flex-col justify-between hover:shadow-lg transition-all duration-300 hover:-translate-y-1 h-full">
+            <div>
+              <div class="w-full aspect-[16/9] max-h-32 rounded-xl bg-[#F8F2E6] border border-bordercream mb-4 flex items-center justify-center p-2 relative overflow-hidden">
+                <svg viewBox="0 0 100 80" class="w-full h-full max-h-24">
+                  <rect width="100" height="80" rx="4" fill="#F9EBE7"/>
+                  <circle cx="50" cy="35" r="20" fill="#FADBD8"/>
+                  <text x="50" y="42" font-size="24" text-anchor="middle">🔐</text>
+                  <rect x="22" y="60" width="56" height="12" rx="3" fill="#C2831B"/>
+                  <text x="50" y="69" font-family="'Noto Serif TC', serif" font-size="7" font-weight="900" fill="#FFF" text-anchor="middle">御前金鑰親啟</text>
+                </svg>
+              </div>
+              <div class="flex flex-wrap items-center justify-between gap-1 mb-2">
+                <span class="px-2.5 py-0.5 rounded-full bg-cinnabar/15 text-cinnabar font-serif font-black text-xs">第二折・深宮啟鑰</span>
+                <span class="text-[11px] text-stone-500 font-mono">辰時・入乾清門</span>
+              </div>
+              <h3 class="text-base font-bold font-serif text-ink mb-1.5 leading-snug">避開內閣：九卿宰相無一人知曉內容</h3>
+              <p class="text-xs text-stone-600 leading-relaxed font-serif">
+                直奔內廷奏事處交御前太監捧入養心殿。皇帝解下隨身金鑰匙親啟鎖匣，完全越過內閣層層繁瑣公文審查。
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-dashed border-bordercream text-[11px] text-stone-600 font-serif bg-paperyellow/50 p-2.5 rounded-lg">
+              <strong>💡 八卦：</strong>大臣打同僚小報告、推薦家鄉小吃，皇帝在私人視窗第一時間全看見！
+            </div>
+          </div>
+
+          <!-- 第三折 -->
+          <div class="min-w-[85%] sm:min-w-0 snap-center bg-papercard retro-border rounded-2xl p-4 sm:p-5 flex flex-col justify-between hover:shadow-lg transition-all duration-300 hover:-translate-y-1 h-full">
+            <div>
+              <div class="w-full aspect-[16/9] max-h-32 rounded-xl bg-[#F8F2E6] border border-bordercream mb-4 flex items-center justify-center p-2 relative overflow-hidden">
+                <svg viewBox="0 0 100 80" class="w-full h-full max-h-24">
+                  <rect width="100" height="80" rx="4" fill="#EDE8E1"/>
+                  <circle cx="50" cy="35" r="20" fill="#D5D8DC"/>
+                  <text x="50" y="42" font-size="24" text-anchor="middle">✍️</text>
+                  <rect x="24" y="60" width="52" height="12" rx="3" fill="#BA261A"/>
+                  <text x="50" y="69" font-family="'Noto Serif TC', serif" font-size="7" font-weight="900" fill="#FFF" text-anchor="middle">子夜硃砂批覽</text>
+                </svg>
+              </div>
+              <div class="flex flex-wrap items-center justify-between gap-1 mb-2">
+                <span class="px-2.5 py-0.5 rounded-full bg-stoneblue/15 text-stoneblue font-serif font-black text-xs">第三折・深夜社畜</span>
+                <span class="text-[11px] text-stone-500 font-mono">子夜・萬籟俱寂</span>
+              </div>
+              <h3 class="text-base font-bold font-serif text-ink mb-1.5 leading-snug">硃批狂人：萬歲爺手執硃砂筆寫到手軟</h3>
+              <p class="text-xs text-stone-600 leading-relaxed font-serif">
+                萬籟俱寂之時，皇帝就著燭火手執紫毫硃筆一行行親自批閱，往往寫得比大臣奏本還長，留下極其生動的吐槽。
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-dashed border-bordercream text-[11px] text-stone-600 font-serif bg-paperyellow/50 p-2.5 rounded-lg">
+              <strong>💡 八卦：</strong>雍正高興了寫「朕就是這樣漢子」，生氣了寫「爾等草包」，半夜真情流露！
+            </div>
+          </div>
+
+          <!-- 第四折 -->
+          <div class="min-w-[85%] sm:min-w-0 snap-center bg-papercard retro-border rounded-2xl p-4 sm:p-5 flex flex-col justify-between hover:shadow-lg transition-all duration-300 hover:-translate-y-1 h-full">
+            <div>
+              <div class="w-full aspect-[16/9] max-h-32 rounded-xl bg-[#F8F2E6] border border-bordercream mb-4 flex items-center justify-center p-2 relative overflow-hidden">
+                <svg viewBox="0 0 100 80" class="w-full h-full max-h-24">
+                  <rect width="100" height="80" rx="4" fill="#EAF3EC"/>
+                  <circle cx="50" cy="35" r="20" fill="#D4EFDF"/>
+                  <text x="50" y="42" font-size="24" text-anchor="middle">📦</text>
+                  <rect x="22" y="60" width="56" height="12" rx="3" fill="#24513B"/>
+                  <text x="50" y="69" font-family="'Noto Serif TC', serif" font-size="7" font-weight="900" fill="#FFF" text-anchor="middle">原件繳銷封存</text>
+                </svg>
+              </div>
+              <div class="flex flex-wrap items-center justify-between gap-1 mb-2">
+                <span class="px-2.5 py-0.5 rounded-full bg-celadon/15 text-celadon font-serif font-black text-xs">第四折・奉旨銷毀</span>
+                <span class="text-[11px] text-stone-500 font-mono">次月・全折回傳</span>
+              </div>
+              <h3 class="text-base font-bold font-serif text-ink mb-1.5 leading-snug">密不透風：看完必須全部繳回，違者重罰</h3>
+              <p class="text-xs text-stone-600 leading-relaxed font-serif">
+                批完原封鎖回發還。大臣恭敬焚香拜讀後嚴禁抄錄私藏，定期必須全數繳回宮中文獻庫，造就今日兩岸故宮典藏。
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-dashed border-bordercream text-[11px] text-stone-600 font-serif bg-paperyellow/50 p-2.5 rounded-lg">
+              <strong>💡 八卦：</strong>若私藏一張硃批當傳家寶，被查出就是抄家重罪！
+            </div>
+          </div>
+
+        </div>
+
+        <!-- 行動端分頁圓點導覽（小螢幕專用，自動隨滑動連動） -->
+        <div class="flex sm:hidden justify-center items-center gap-2 mt-4" id="carousel-dots">
+          <button onclick="scrollMemorialCard(0)" class="w-2.5 h-2.5 rounded-full bg-cinnabar transition-all duration-300" aria-label="第一折"></button>
+          <button onclick="scrollMemorialCard(1)" class="w-2.5 h-2.5 rounded-full bg-stone-300 transition-all duration-300" aria-label="第二折"></button>
+          <button onclick="scrollMemorialCard(2)" class="w-2.5 h-2.5 rounded-full bg-stone-300 transition-all duration-300" aria-label="第三折"></button>
+          <button onclick="scrollMemorialCard(3)" class="w-2.5 h-2.5 rounded-full bg-stone-300 transition-all duration-300" aria-label="第四折"></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 四大帝王檔案 -->
+    <section id="emperors" class="scroll-mt-20">
+      <div class="text-center max-w-5xl mx-auto mb-14 px-2">
+        <span class="text-cinnabar font-bold tracking-widest text-xs uppercase font-serif">Imperial Court Portraits & Dossiers</span>
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-black text-ink mt-1 font-serif whitespace-nowrap">【紫禁城反差萌特刊】四大帝王御容與真性情實錄</h2>
+        <div class="w-16 h-1 bg-cinnabar mx-auto mt-3 rounded-full"></div>
+        <p class="text-stone-700 text-sm sm:text-base mt-4 font-serif">
+          點擊頭像或文物插圖可放大查看細節；點擊<strong>「請御批：蓋大印」</strong>按鈕即可重溫帝王硃印！
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+        <!-- 檔案 1: 康熙 -->
+        <article class="emperor-card retro-border bg-papercard rounded-2xl p-6 sm:p-8 relative flex flex-col justify-between" id="card-kangxi">
+          <div class="imperial-seal" id="seal-kangxi">
+            康熙御筆<br>知道了！
+          </div>
+
+          <div>
+            <div class="flex items-center justify-between border-b border-dashed border-bordercream pb-4 mb-5">
+              <div class="flex items-center space-x-3.5">
+                <div class="avatar-frame cursor-pointer" onclick="openSvgLightbox('kangxi-portrait', '清聖祖康熙皇帝（愛新覺羅・玄燁）御容朝服插圖。身著明黃色五爪金龍袍，頂戴紅絨冬朝冠飾東珠頂，面容沉著，為大清盛世奠基者與密摺制度開創者。')">
+                  <div class="avatar-inner">
+                    <svg viewBox="0 0 120 120" class="w-full h-full">
+                      <radialGradient id="kx-p-bg" cx="50%" cy="40%" r="65%">
+                        <stop offset="0%" stop-color="#FFF8EC"/>
+                        <stop offset="70%" stop-color="#EADBBE"/>
+                        <stop offset="100%" stop-color="#CEB690"/>
+                      </radialGradient>
+                      <rect width="120" height="120" fill="url(#kx-p-bg)"/>
+                      <path d="M10 120 Q30 84 60 84 Q90 84 110 120 Z" fill="#E6981E"/>
+                      <path d="M22 120 C32 94 48 88 60 88 C72 88 88 94 98 120 Z" fill="#1C364D"/>
+                      <ellipse cx="60" cy="56" rx="20" ry="26" fill="#FCE5CE"/>
+                      <path d="M47 48 Q53 45 58 48 M62 48 Q67 45 73 48" stroke="#3D200E" stroke-width="2.2" fill="none"/>
+                      <circle cx="52" cy="53" r="2.2" fill="#1C0E07"/><circle cx="68" cy="53" r="2.2" fill="#1C0E07"/>
+                      <path d="M51 71 Q60 76 69 71" stroke="#4A2211" stroke-width="2" fill="none"/>
+                      <path d="M52 73 Q60 86 68 73 Z" fill="#3D1D0D"/>
+                      <ellipse cx="60" cy="42" rx="34" ry="7" fill="#181514"/>
+                      <path d="M30 42 Q60 18 90 42 Q60 36 30 42 Z" fill="#B32417"/>
+                      <circle cx="60" cy="9" r="4.2" fill="#F1C40F"/>
+                    </svg>
+                  </div>
+                </div>
+                <div>
+                  <h3 class="font-black text-xl text-ink font-serif">康熙帝（聖祖・玄燁）</h3>
+                  <span class="text-xs font-bold text-palacegold bg-imperial/10 px-2 py-0.5 rounded font-serif">海淘代購狂魔・外國科技吃貨</span>
+                </div>
+              </div>
+              <span class="text-xs text-stone-500 font-mono">在位 61 年</span>
+            </div>
+
+            <div class="space-y-4 text-sm text-stone-700 leading-relaxed font-serif">
+              <div class="bg-amber-50/70 p-3.5 rounded-xl border border-amber-200/80 flex flex-col sm:flex-row gap-3 items-center">
+                <div class="w-full sm:w-28 h-24 rounded-lg overflow-hidden border border-bordercream flex-shrink-0 artifact-thumb bg-[#FCF7ED] flex items-center justify-center p-1"
+                     onclick="openSvgLightbox('mango-doc', '康熙朝福建巡撫覺羅滿保奏進芒果檔案與臺灣芒果插圖。康熙對南國特產極度好奇，連發御折追問吃法與風味。')">
+                  <svg viewBox="0 0 100 80" class="w-full h-full">
+                    <rect width="100" height="80" rx="4" fill="#FCF7ED"/>
+                    <rect x="8" y="10" width="46" height="60" rx="2" fill="#FFFDF9" stroke="#DEC8A2" stroke-width="1.2"/>
+                    <line x1="15" y1="20" x2="44" y2="20" stroke="#7A6858" stroke-width="1.8"/>
+                    <line x1="15" y1="28" x2="42" y2="28" stroke="#7A6858" stroke-width="1.8"/>
+                    <line x1="15" y1="36" x2="38" y2="36" stroke="#7A6858" stroke-width="1.8"/>
+                    <text x="16" y="60" font-family="'Ma Shan Zheng', cursive" font-size="9" fill="#BA261A">知道了</text>
+                    <ellipse cx="74" cy="46" rx="18" ry="24" fill="#F39C12" transform="rotate(-15 74 46)"/>
+                    <path d="M78 22 C68 18 64 8 72 6 C80 6 82 16 78 22 Z" fill="#27AE60"/>
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="font-bold text-ink flex items-center gap-1.5 text-sm font-serif">
+                    <span>🥭</span> 連發密折狂催：「芒果到底是個啥果子？」
+                  </h4>
+                  <p class="mt-1 text-xs text-stone-600 leading-relaxed font-serif">
+                    康熙五十八年，福建巡撫覺羅滿保首次將臺灣芒果裝箱進貢。北方從未見過芒果的康熙大感好奇，連批數折追問：「此物何時成熟？如何食用？味道是酸是甜？」得知無甚大用後失望硃批：<strong>「知道了，既無用，以後毋庸進！」</strong>
+                  </p>
+                </div>
+              </div>
+
+              <div>
+                <h4 class="font-bold text-ink flex items-center gap-1.5 text-base font-serif">
+                  <span>🍫</span> 西洋巧克力試喝：「苦得要死，能治什麼病？」
+                </h4>
+                <p class="mt-1 text-xs sm:text-sm text-stone-600 leading-relaxed font-serif">
+                  熱愛西洋醫術的康熙收到羅馬運來的「綽科拉」（巧克力）。康熙以為是保命仙丹，命御醫化水飲用後嫌棄極苦，親提長折質疑：「此藥可治胃寒乎？著詳詢西洋人細細寫來！」得知只是甜點飲料後便束之高閣。
+                </p>
+              </div>
+
+              <div class="bg-paperyellow/70 rounded-xl p-3 border border-bordercream text-[11px] text-stone-600 space-y-1">
+                <div>📜 <strong>史料來源：</strong>臺北故宮藏《宮中檔康熙朝奏折》第 14 輯。</div>
+                <div>💬 <strong>原折硃批摘錄：</strong>「知道了。芒果係外來未見之物，無用，不必再送。」</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-5 border-t border-bordercream/60">
+            <div class="mb-4">
+              <div class="flex justify-between text-xs font-bold mb-1.5 text-stone-600 font-serif">
+                <span>海外代購與吃貨追問指數</span>
+                <span class="text-cinnabar font-mono font-bold">94%</span>
+              </div>
+              <div class="w-full bg-stone-200 h-2.5 rounded-full overflow-hidden">
+                <div class="stat-bar h-full rounded-full bg-gradient-to-r from-imperial to-cinnabar" data-width="94%"></div>
+              </div>
+            </div>
+
+            <button onclick="stampMemorial('kangxi')" class="w-full py-2.5 px-4 rounded-xl border-2 border-cinnabar bg-transparent hover:bg-cinnabar text-cinnabar hover:text-white font-bold text-sm tracking-wider transition-all flex items-center justify-center gap-2 shadow-sm active:scale-95 font-serif">
+              <span>🈴 請御批：蓋「朕知道了」大印</span>
+            </button>
+          </div>
+        </article>
+
+        <!-- 檔案 2: 雍正 -->
+        <article class="emperor-card retro-border bg-papercard rounded-2xl p-6 sm:p-8 relative flex flex-col justify-between" id="card-yongzheng">
+          <div class="imperial-seal" id="seal-yongzheng">
+            雍正御筆<br>真漢子！
+          </div>
+
+          <div>
+            <div class="flex items-center justify-between border-b border-dashed border-bordercream pb-4 mb-5">
+              <div class="flex items-center space-x-3.5">
+                <div class="avatar-frame cursor-pointer" onclick="openSvgLightbox('yongzheng-portrait', '清世宗雍正皇帝（愛新覺羅・胤禛）御容朝服插圖。面容深沉冷峻、五官嚴正，身穿暗絳紅金龍朝袍，黑貂冬朝冠飾東珠。')">
+                  <div class="avatar-inner">
+                    <svg viewBox="0 0 120 120" class="w-full h-full">
+                      <radialGradient id="yz-p-bg" cx="50%" cy="40%" r="65%">
+                        <stop offset="0%" stop-color="#FBF2E8"/><stop offset="70%" stop-color="#E2CCA8"/><stop offset="100%" stop-color="#BF9E78"/>
+                      </radialGradient>
+                      <rect width="120" height="120" fill="url(#yz-p-bg)"/>
+                      <path d="M10 120 Q30 82 60 82 Q90 82 110 120 Z" fill="#992318"/>
+                      <ellipse cx="60" cy="55" rx="19" ry="26" fill="#FCE5CE"/>
+                      <path d="M46 47 L56 48 M64 48 L74 47" stroke="#1F1008" stroke-width="2.6" stroke-linecap="round"/>
+                      <ellipse cx="51" cy="52" rx="2.2" ry="1.5" fill="#140803"/><ellipse cx="69" cy="52" rx="2.2" ry="1.5" fill="#140803"/>
+                      <path d="M51 70 Q60 68 69 70" stroke="#781E1E" stroke-width="2.4" stroke-linecap="round"/>
+                      <path d="M53 72 Q60 82 67 72 Z" fill="#2E160A"/>
+                      <ellipse cx="60" cy="41" rx="34" ry="7" fill="#161413"/>
+                      <path d="M30 41 Q60 16 90 41 Q60 35 30 41 Z" fill="#992116"/>
+                      <circle cx="60" cy="9" r="4" fill="#E5A93C"/>
+                    </svg>
+                  </div>
+                </div>
+                <div>
+                  <h3 class="font-black text-xl text-ink font-serif">雍正帝（世宗・胤禛）</h3>
+                  <span class="text-xs font-bold text-cinnabar bg-cinnabar/10 px-2 py-0.5 rounded font-serif">狂暴社畜・毒舌Cosplay鼻祖</span>
+                </div>
+              </div>
+              <span class="text-xs text-stone-500 font-mono">在位 13 年</span>
+            </div>
+
+            <div class="space-y-4 text-sm text-stone-700 leading-relaxed font-serif">
+              <div class="bg-gradient-to-r from-red-50/70 to-amber-50/50 p-3.5 rounded-xl border border-red-200/80 shadow-inner flex flex-col sm:flex-row gap-3.5 items-center">
+                <div class="w-full sm:w-36 h-28 rounded-lg overflow-hidden border-2 border-palacegold/40 flex-shrink-0 artifact-thumb shadow-md bg-[#F4EDE2] flex items-center justify-center p-0 relative"
+                     onclick="openSvgLightbox('wig-tiger', '《雍正行樂圖冊・刺虎頁》故宮藏。雍正帝身穿西洋獵裝、頭戴金色巴洛克假髮手持長矛對峙猛虎。')">
+                  <svg viewBox="0 0 160 120" class="w-full h-full">
+                    <rect width="160" height="120" fill="#EFE5D2"/>
+                    <path d="M0 95 Q35 78 75 92 Q115 106 160 85 L160 120 L0 120 Z" fill="#B8A484"/>
+                    <!-- 猛虎 -->
+                    <path d="M12 90 C18 68 38 65 52 75 C60 82 66 94 58 102 Z" fill="#E66A00"/>
+                    <ellipse cx="50" cy="72" rx="13" ry="11" fill="#FFB347"/>
+                    <path d="M22 80 Q30 76 26 88 M34 76 Q42 74 38 86" stroke="#221105" stroke-width="1.8" fill="none"/>
+                    <!-- 長矛 -->
+                    <line x1="56" y1="74" x2="118" y2="72" stroke="#4A5568" stroke-width="2.5"/>
+                    <polygon points="56,71 44,74 56,77" fill="#CBD5E1"/>
+                    <!-- 雍正假髮人物 -->
+                    <path d="M112 58 C108 72 106 88 122 88 C138 88 136 72 134 58 Z" fill="#1E3A8A"/>
+                    <ellipse cx="124" cy="46" rx="9" ry="11" fill="#FCE7D0"/>
+                    <!-- 巴洛克金色長假髮 -->
+                    <path d="M111 44 C106 28 142 26 137 44 C144 50 142 62 134 65 C132 55 130 52 124 52 C118 52 116 55 114 65 C106 62 104 50 111 44 Z" fill="#D97706"/>
+                    <text x="146" y="20" font-family="'Ma Shan Zheng', cursive" font-size="7" fill="#BA261A" text-anchor="middle">行樂</text>
+                  </svg>
+                  <span class="absolute bottom-1 right-1.5 px-1.5 py-0.5 rounded bg-black/60 text-white text-[9px] font-mono tracking-wider">故宮原畫意象 🔍</span>
+                </div>
+                <div>
+                  <h4 class="font-bold text-ink flex items-center gap-1.5 text-sm font-serif">
+                    <span>🧙‍♂️</span> 解壓秘法：戴假髮扮爵士的變裝狂熱
+                  </h4>
+                  <p class="mt-1 text-xs text-stone-600 leading-relaxed font-serif">
+                    平日威嚴肅穆，但雍正私生活解壓竟然是「Cosplay 換裝自拍」。他命畫師繪製《雍正行樂圖》：畫中戴西洋捲曲假髮刺虎、化身道士持杖捉蛇、扮喇嘛打坐，反差萌令人嘆為觀止。
+                  </p>
+                </div>
+              </div>
+
+              <div>
+                <h4 class="font-bold text-ink flex items-center gap-1.5 text-base font-serif">
+                  <span>💼</span> 一年只放假三天半的極限熬夜加班狂
+                </h4>
+                <p class="mt-1 text-xs sm:text-sm text-stone-600 leading-relaxed font-serif">
+                  雍正每天只睡不到四個小時。他在三更半夜親自批核萬餘件奏摺，寫了逾千萬字硃批！心情爽快時對忠臣告白：<strong>「朕就是這樣漢子，就是這樣秉性，就是這樣皇帝！」</strong>官員不力則直接痛罵「草包」。
+                </p>
+              </div>
+
+              <div class="bg-paperyellow/70 rounded-xl p-3 border border-bordercream text-[11px] text-stone-600 space-y-1">
+                <div>📜 <strong>史料來源：</strong>《雍正朝漢文諭旨彙編》、故宮藏《雍正行樂圖冊》。</div>
+                <div>💬 <strong>原折硃批摘錄：</strong>「朕就是這樣漢子！就是這樣秉性！就是這樣皇帝！爾等勿負朕！」</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-5 border-t border-bordercream/60">
+            <div class="mb-4">
+              <div class="flex justify-between text-xs font-bold mb-1.5 text-stone-600 font-serif">
+                <span>毒舌批折與社畜熬夜指數</span>
+                <span class="text-cinnabar font-mono font-bold">100%</span>
+              </div>
+              <div class="w-full bg-stone-200 h-2.5 rounded-full overflow-hidden">
+                <div class="stat-bar h-full rounded-full bg-gradient-to-r from-imperial to-cinnabar" data-width="100%"></div>
+              </div>
+            </div>
+
+            <button onclick="stampMemorial('yongzheng')" class="w-full py-2.5 px-4 rounded-xl border-2 border-cinnabar bg-transparent hover:bg-cinnabar text-cinnabar hover:text-white font-bold text-sm tracking-wider transition-all flex items-center justify-center gap-2 shadow-sm active:scale-95 font-serif">
+              <span>🈴 請御批：蓋「這樣漢子」大印</span>
+            </button>
+          </div>
+        </article>
+
+        <!-- 檔案 3: 乾隆 -->
+        <article class="emperor-card retro-border bg-papercard rounded-2xl p-6 sm:p-8 relative flex flex-col justify-between" id="card-qianlong">
+          <div class="imperial-seal" id="seal-qianlong">
+            乾隆御覽<br>印滿天下
+          </div>
+
+          <div>
+            <div class="flex items-center justify-between border-b border-dashed border-bordercream pb-4 mb-5">
+              <div class="flex items-center space-x-3.5">
+                <div class="avatar-frame cursor-pointer" onclick="openSvgLightbox('qianlong-portrait', '清高宗乾隆皇帝（愛新覺羅・弘曆）御容朝服插圖。身著明黃色織金龍袍，頂戴紅絨冬朝冠飾三重東珠金頂。熱衷在天下名畫上蓋章提詩。')">
+                  <div class="avatar-inner">
+                    <svg viewBox="0 0 120 120" class="w-full h-full">
+                      <radialGradient id="ql-p-bg" cx="50%" cy="40%" r="65%">
+                        <stop offset="0%" stop-color="#FFFDF5"/><stop offset="70%" stop-color="#ECD8B8"/><stop offset="100%" stop-color="#CAA87D"/>
+                      </radialGradient>
+                      <rect width="120" height="120" fill="url(#ql-p-bg)"/>
+                      <path d="M10 120 Q30 82 60 82 Q90 82 110 120 Z" fill="#ECA223"/>
+                      <ellipse cx="60" cy="55" rx="20" ry="26" fill="#FCE8D5"/>
+                      <path d="M46 48 Q52 45 58 48 M62 48 Q68 45 74 48" stroke="#3D200E" stroke-width="2.2" fill="none"/>
+                      <circle cx="52" cy="53" r="2.4" fill="#1C0E07"/><circle cx="68" cy="53" r="2.4" fill="#1C0E07"/>
+                      <path d="M52 69 Q60 72 68 69" stroke="#BA261A" stroke-width="2"/>
+                      <ellipse cx="60" cy="41" rx="34" ry="7" fill="#181514"/>
+                      <path d="M30 41 Q60 16 90 41 Q60 35 30 41 Z" fill="#BA2215"/>
+                      <circle cx="60" cy="7" r="4.2" fill="#FFD700"/>
+                    </svg>
+                  </div>
+                </div>
+                <div>
+                  <h3 class="font-black text-xl text-ink font-serif">乾隆帝（高宗・弘曆）</h3>
+                  <span class="text-xs font-bold text-stoneblue bg-stoneblue/10 px-2 py-0.5 rounded font-serif">文物彈幕點讚怪・大花瓶控</span>
+                </div>
+              </div>
+              <span class="text-xs text-stone-500 font-mono">在位 60 年</span>
+            </div>
+
+            <div class="space-y-4 text-sm text-stone-700 leading-relaxed font-serif">
+              <div class="bg-blue-50/60 p-3.5 rounded-xl border border-blue-100 flex flex-col sm:flex-row gap-3 items-center">
+                <div class="w-full sm:w-28 h-24 rounded-lg overflow-hidden border border-bordercream flex-shrink-0 artifact-thumb bg-[#F5F0E4] flex items-center justify-center p-1"
+                     onclick="openSvgLightbox('xue-tie', '王羲之《快雪時晴帖》被乾隆瘋狂蓋印章實況。乾隆在僅有二十餘字的留白處蓋滿了「乾隆御覽之寶」等印章並題跋大字。')">
+                  <svg viewBox="0 0 100 80" class="w-full h-full">
+                    <rect width="100" height="80" rx="3" fill="#E8DEC8"/>
+                    <rect x="4" y="5" width="92" height="70" rx="2" fill="#F2E9D4" stroke="#D3C3A5" stroke-width="1.2"/>
+                    <text x="36" y="32" font-family="'Noto Serif TC', serif" font-size="7.5" font-weight="900" fill="#1C1A19">快雪時晴</text>
+                    <text x="36" y="46" font-family="'Noto Serif TC', serif" font-size="7.5" font-weight="900" fill="#1C1A19">佳想安善</text>
+                    <text x="12" y="34" font-family="'Ma Shan Zheng', cursive" font-size="16" fill="#801515" font-weight="bold">神</text>
+                    <rect x="10" y="44" width="13" height="13" fill="none" stroke="#BA261A" stroke-width="1.6"/>
+                    <circle cx="82" cy="22" r="7.5" fill="none" stroke="#BA261A" stroke-width="1.6"/>
+                    <rect x="74" y="40" width="16" height="12" fill="none" stroke="#BA261A" stroke-width="1.6"/>
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="font-bold text-ink flex items-center gap-1.5 text-sm font-serif">
+                    <span>🖃</span> 瘋狂蓋章毀名畫：實體彈幕發明家
+                  </h4>
+                  <p class="mt-1 text-xs text-stone-600 leading-relaxed font-serif">
+                    乾隆極度自戀且喜愛鑑賞書畫。王羲之的《快雪時晴帖》短短數十行字，被乾隆蓋了<strong>上百顆私印</strong>；留白處全被他親筆題詩填滿，徹底毀壞古人留白美感！
+                  </p>
+                </div>
+              </div>
+
+              <div>
+                <h4 class="font-bold text-ink flex items-center gap-1.5 text-base font-serif">
+                  <span>🏺</span> 農家樂大花瓶：集17種釉色於一身的瓷母
+                </h4>
+                <p class="mt-1 text-xs sm:text-sm text-stone-600 leading-relaxed font-serif">
+                  乾隆極其厭惡父親雍正追求的極簡單色釉，崇尚繁複、極度華麗的土豪審美。他下令燒造集合仿汝、青花、粉彩等<strong>17種不同燒成溫度釉色</strong>的「各種釉彩大瓶（瓷母）」，展現強大炫技。
+                </p>
+              </div>
+
+              <div class="bg-paperyellow/70 rounded-xl p-3 border border-bordercream text-[11px] text-stone-600 space-y-1">
+                <div>📜 <strong>史料來源：</strong>臺北故宮藏王羲之《快雪時晴帖》、北京故宮藏《各種釉彩大瓶》。</div>
+                <div>💬 <strong>冷知識數據：</strong>乾隆一生刻製印章多達 1800 餘方，作詩 43000 首，無一入選唐詩三百首。</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-5 border-t border-bordercream/60">
+            <div class="mb-4">
+              <div class="flex justify-between text-xs font-bold mb-1.5 text-stone-600 font-serif">
+                <span>蓋章按讚與自戀美學指數</span>
+                <span class="text-cinnabar font-mono font-bold">120% (爆表)</span>
+              </div>
+              <div class="w-full bg-stone-200 h-2.5 rounded-full overflow-hidden">
+                <div class="stat-bar h-full rounded-full bg-gradient-to-r from-imperial via-stoneblue to-cinnabar" data-width="100%"></div>
+              </div>
+            </div>
+
+            <button onclick="stampMemorial('qianlong')" class="w-full py-2.5 px-4 rounded-xl border-2 border-stoneblue bg-transparent hover:bg-stoneblue text-stoneblue hover:text-white font-bold text-sm tracking-wider transition-all flex items-center justify-center gap-2 shadow-sm active:scale-95 font-serif">
+              <span>🈴 請御批：蓋「乾隆御覽」大印</span>
+            </button>
+          </div>
+        </article>
+
+        <!-- 檔案 4: 嘉慶 -->
+        <article class="emperor-card retro-border bg-papercard rounded-2xl p-6 sm:p-8 relative flex flex-col justify-between" id="card-jiaqing">
+          <div class="imperial-seal" id="seal-jiaqing">
+            嘉慶糾察<br>字醜重寫！
+          </div>
+
+          <div>
+            <div class="flex items-center justify-between border-b border-dashed border-bordercream pb-4 mb-5">
+              <div class="flex items-center space-x-3.5">
+                <div class="avatar-frame cursor-pointer" onclick="openSvgLightbox('jiaqing-portrait', '清仁宗嘉慶皇帝（愛新覺羅・顒琰）御容朝服插圖。身著墨綠石青色朝袍，肅清和珅巨貪、節儉治國，帶有極致的公文文字強迫症。')">
+                  <div class="avatar-inner">
+                    <svg viewBox="0 0 120 120" class="w-full h-full">
+                      <radialGradient id="jq-p-bg" cx="50%" cy="40%" r="65%">
+                        <stop offset="0%" stop-color="#F6FCF3"/><stop offset="70%" stop-color="#D2E4CE"/><stop offset="100%" stop-color="#A5C0A0"/>
+                      </radialGradient>
+                      <rect width="120" height="120" fill="url(#jq-p-bg)"/>
+                      <path d="M10 120 Q30 84 60 84 Q90 84 110 120 Z" fill="#24513B"/>
+                      <ellipse cx="60" cy="56" rx="20" ry="26" fill="#FCE5CE"/>
+                      <path d="M46 48 L56 49 M64 49 L74 48" stroke="#2B160C" stroke-width="2.4" stroke-linecap="round"/>
+                      <circle cx="51" cy="53" r="2.3" fill="#170F0A"/><circle cx="69" cy="53" r="2.3" fill="#170F0A"/>
+                      <path d="M51 71 Q60 69 69 71" stroke="#3D200E" stroke-width="2.4" stroke-linecap="round"/>
+                      <ellipse cx="60" cy="42" rx="34" ry="7" fill="#161715"/>
+                      <path d="M30 42 Q60 17 90 42 Q60 36 30 42 Z" fill="#8C1D13"/>
+                      <circle cx="60" cy="8" r="4" fill="#DDA520"/>
+                    </svg>
+                  </div>
+                </div>
+                <div>
+                  <h3 class="font-black text-xl text-ink font-serif">嘉慶帝（仁宗・顒琰）</h3>
+                  <span class="text-xs font-bold text-celadon bg-celadon/10 px-2 py-0.5 rounded font-serif">倒楣填坑人・奏摺字體糾察隊</span>
+                </div>
+              </div>
+              <span class="text-xs text-stone-500 font-mono">在位 25 年</span>
+            </div>
+
+            <div class="space-y-4 text-sm text-stone-700 leading-relaxed font-serif">
+              <div class="bg-emerald-50/60 p-3.5 rounded-xl border border-emerald-100 flex flex-col sm:flex-row gap-3 items-center">
+                <div class="w-full sm:w-28 h-24 rounded-lg overflow-hidden border border-bordercream flex-shrink-0 artifact-thumb bg-[#EDF3EC] flex items-center justify-center p-1"
+                     onclick="openSvgLightbox('heshen-tomb', '「和珅跌倒，嘉慶吃飽」歷史典故圖。抄查和珅二十大罪狀，收繳價值數億兩白銀的金元寶與珍寶填補大清虧空。')">
+                  <svg viewBox="0 0 100 80" class="w-full h-full">
+                    <rect width="100" height="80" fill="#EAF2E8"/>
+                    <ellipse cx="34" cy="62" rx="18" ry="9" fill="#F1C40F" stroke="#D68910" stroke-width="1.4"/>
+                    <circle cx="34" cy="57" r="5" fill="#F39C12"/>
+                    <ellipse cx="66" cy="62" rx="18" ry="9" fill="#F1C40F" stroke="#D68910" stroke-width="1.4"/>
+                    <circle cx="66" cy="57" r="5" fill="#F39C12"/>
+                    <ellipse cx="50" cy="48" rx="20" ry="10" fill="#F39C12" stroke="#B7770D" stroke-width="1.4"/>
+                    <rect x="22" y="14" width="56" height="20" rx="3" fill="#BA261A"/>
+                    <text x="50" y="28" font-family="'Noto Serif TC', serif" font-size="10" font-weight="900" fill="#FFF" text-anchor="middle">查抄沒收</text>
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="font-bold text-ink flex items-center gap-1.5 text-sm font-serif">
+                    <span>💰</span> 老爸晚年留巨坑：抄和珅跌倒嘉慶吃飽
+                  </h4>
+                  <p class="mt-1 text-xs text-stone-600 leading-relaxed font-serif">
+                    一上任就面對老爹乾隆巡遊留下的大虧空。乾隆前腳駕崩，嘉慶後腳就雷厲風行抄查巨貪和珅，查抄白銀數億兩，民間戲稱「和珅跌倒，嘉慶吃飽」。此後嘉慶倡導極度節儉。
+                  </p>
+                </div>
+              </div>
+
+              <div>
+                <h4 class="font-bold text-ink flex items-center gap-1.5 text-base font-serif">
+                  <span>✍️</span> 強迫症糾察隊：「字跡潦草，著重寫呈閱！」
+                </h4>
+                <p class="mt-1 text-xs sm:text-sm text-stone-600 leading-relaxed font-serif">
+                  面對內憂外患，嘉慶脾氣被磨得極具強迫症。他最痛恨大臣在密折裡使用潦草行草。廣西巡撫多次因呈遞摺子字體草率，被嘉慶在上面狠狠痛批：<strong>「字畫粗鄙，毫無敬意，著重抄一本再來！」</strong>全朝文官半夜練字練到哭。
+                </p>
+              </div>
+
+              <div class="bg-paperyellow/70 rounded-xl p-3 border border-bordercream text-[11px] text-stone-600 space-y-1">
+                <div>📜 <strong>史料來源：</strong>《清仁宗實錄》卷一百一十二、故宮藏《嘉慶朝硃批奏折》。</div>
+                <div>💬 <strong>原折硃批摘錄：</strong>「所奏字畫潦草不堪，幾於不可辨認，著退回重新恭楷謄寫呈覽。」</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-5 border-t border-bordercream/60">
+            <div class="mb-4">
+              <div class="flex justify-between text-xs font-bold mb-1.5 text-stone-600 font-serif">
+                <span>省錢填坑與字跡抓狂指數</span>
+                <span class="text-cinnabar font-mono font-bold">89%</span>
+              </div>
+              <div class="w-full bg-stone-200 h-2.5 rounded-full overflow-hidden">
+                <div class="stat-bar h-full rounded-full bg-gradient-to-r from-imperial to-celadon" data-width="89%"></div>
+              </div>
+            </div>
+
+            <button onclick="stampMemorial('jiaqing')" class="w-full py-2.5 px-4 rounded-xl border-2 border-celadon bg-transparent hover:bg-celadon text-celadon hover:text-white font-bold text-sm tracking-wider transition-all flex items-center justify-center gap-2 shadow-sm active:scale-95 font-serif">
+              <span>🈴 請御批：蓋「重寫抄錄」大印</span>
+            </button>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- 雍乾審美修羅場 -->
+    <section id="battle" class="scroll-mt-20">
+      <div class="bg-papercard retro-border rounded-3xl p-6 sm:p-10">
+        <div class="text-center max-w-2xl mx-auto mb-10">
+          <span class="text-cinnabar font-bold tracking-widest text-xs uppercase font-serif">Aesthetic Battle</span>
+          <h2 class="text-2xl sm:text-3xl font-black text-ink mt-1 font-serif">【皇家審美修羅場】雍正極簡風 vs 乾隆土豪風</h2>
+          <div class="w-12 h-1 bg-imperial mx-auto mt-2 rounded-full"></div>
+          <p class="text-stone-700 text-xs sm:text-sm mt-3 font-serif">
+            故宮策展人最常津津樂道的歷史反差：崇尚「宋代極簡高雅」的老爹雍正，怎麼會生出一個酷愛「繁複花哨集大成」的土豪兒子乾隆？
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+          
+          <!-- 雍正美學 -->
+          <div class="p-6 rounded-2xl bg-[#F6F2E9] border border-bordercream flex flex-col items-center text-center justify-between">
+            <div>
+              <div class="flex items-center gap-2 justify-center mb-4">
+                <span class="px-3.5 py-1 bg-stone-800 text-white text-xs font-bold rounded-full shadow-sm font-serif">老爹・雍正美學</span>
+              </div>
+
+              <div class="w-40 h-40 mx-auto rounded-xl overflow-hidden border border-bordercream mb-4 bg-white shadow-sm artifact-thumb p-3 flex items-center justify-center"
+                   onclick="openSvgLightbox('ruby-bowl', '清雍正朝霽紅釉瓷碗工筆插圖。線條極致簡約流暢，追求宋代文人純淨深邃之單色釉美學，不施任何繁冗彩繪。')">
+                <svg viewBox="0 0 120 120" class="w-full h-full">
+                  <radialGradient id="bowl-shd" cx="40%" cy="35%" r="65%">
+                    <stop offset="0%" stop-color="#E74C3C"/><stop offset="60%" stop-color="#BA261A"/><stop offset="100%" stop-color="#69110B"/>
+                  </radialGradient>
+                  <path d="M12 46 C12 88 40 102 60 102 C80 102 108 88 108 46 Z" fill="url(#bowl-shd)"/>
+                  <ellipse cx="60" cy="46" rx="48" ry="7" fill="#C0392B"/>
+                  <rect x="44" y="102" width="32" height="7" rx="2" fill="#EAECEE"/>
+                </svg>
+              </div>
+
+              <h3 class="font-bold text-lg text-ink font-serif">宋代文人高冷純色釉</h3>
+              <p class="text-xs sm:text-sm text-stone-600 mt-2 leading-relaxed font-serif">
+                講求器型線條流暢、崇尚單色釉（如霽紅、檸檬黃），追求「雨過天青雲破處」的高雅文人留白情趣。
+              </p>
+            </div>
+
+            <div class="mt-4 text-xs font-mono text-stone-600 bg-white/70 px-3 py-1.5 rounded-lg border border-stone-200 w-full">
+              審美代表：雍正十二色菊瓣盤、淡粉釉瓷杯
+            </div>
+          </div>
+
+          <!-- 乾隆美學 -->
+          <div class="p-6 rounded-2xl bg-[#FFF5F2] border border-red-200 flex flex-col items-center text-center justify-between">
+            <div>
+              <div class="flex items-center gap-2 justify-center mb-4">
+                <span class="px-3.5 py-1 bg-cinnabar text-white text-xs font-bold rounded-full shadow-sm font-serif">兒子・乾隆美學</span>
+              </div>
+
+              <div class="w-40 h-40 mx-auto rounded-xl overflow-hidden border border-red-200 mb-4 bg-white shadow-sm artifact-thumb p-2 flex items-center justify-center"
+                   onclick="openSvgLightbox('cimu-vase', '清乾隆朝《各種釉彩大瓶（瓷母）》工筆插圖。瓶身集合青花、粉彩、琺瑯彩、仿汝仿哥等17種釉彩工藝，技術登峰造極，風格極繁極奢。')">
+                <svg viewBox="0 0 120 120" class="w-full h-full">
+                  <rect x="44" y="8" width="32" height="8" rx="1" fill="#884EA0"/>
+                  <path d="M44 16 L34 32 L86 32 L76 16 Z" fill="#E67E22"/>
+                  <path d="M34 42 Q16 60 22 82 Q30 105 60 105 Q90 105 98 82 Q104 60 86 42 Z" fill="#24517E"/>
+                  <ellipse cx="60" cy="56" rx="36" ry="6" fill="#F39C12"/>
+                  <ellipse cx="60" cy="68" rx="38" ry="6.5" fill="#E74C3C"/>
+                  <ellipse cx="60" cy="80" rx="36" ry="6" fill="#1ABC9C"/>
+                  <rect x="42" y="105" width="36" height="7" rx="1" fill="#C0392B"/>
+                </svg>
+              </div>
+
+              <h3 class="font-bold text-lg text-ink font-serif">大開大合農家樂集大成</h3>
+              <p class="text-xs sm:text-sm text-stone-600 mt-2 leading-relaxed font-serif">
+                恨不得把全世界最好的技術全糊在同一個器物上！喜愛琺瑯彩轉心瓶、鏤空雕花、金光閃閃，追求霸氣極致。
+              </p>
+            </div>
+
+            <div class="mt-4 text-xs font-mono text-stone-600 bg-white/70 px-3 py-1.5 rounded-lg border border-red-100 w-full">
+              審美代表：各種釉彩大瓶（瓷母）、黃地粉彩轉心瓶
+            </div>
+          </div>
+
+        </div>
+
+        <div class="fish-tail font-serif"></div>
+      </div>
+    </section>
+
+    <!-- 文獻來源出處 -->
+    <section id="sources" class="scroll-mt-20 pt-6">
+      <div class="bg-paperyellow/60 rounded-2xl p-6 sm:p-8 border border-bordercream">
+        <h3 class="font-bold text-lg text-ink mb-3 flex items-center gap-2 font-serif">
+          <span>🏛️</span> 本專題文獻考證與典藏出處
+        </h3>
+        <p class="text-xs sm:text-sm text-stone-700 leading-relaxed mb-4 font-serif">
+          本站趣味內容與肖像依據清代宮中檔奏摺、起居注、清實錄與國立故宮博物院公開典藏文獻，並非民間野史或影視劇附會杜撰：
+        </p>
+        <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-stone-700 font-serif">
+          <li class="bg-white/75 p-3 rounded-lg border border-bordercream flex items-start gap-2 shadow-2xs">
+            <span class="text-cinnabar font-bold mt-0.5">●</span>
+            <div>
+              <strong>《宮中檔康熙朝奏摺》：</strong>臺北故宮藏覺羅滿保奏進芒果硃批折及綽科拉御旨。
+            </div>
+          </li>
+          <li class="bg-white/75 p-3 rounded-lg border border-bordercream flex items-start gap-2 shadow-2xs">
+            <span class="text-cinnabar font-bold mt-0.5">●</span>
+            <div>
+              <strong>《雍正朝起居注》及硃批諭旨：</strong>故宮文獻館藏田文鏡摺與北京故宮藏《雍正行樂圖冊》。
+            </div>
+          </li>
+          <li class="bg-white/75 p-3 rounded-lg border border-bordercream flex items-start gap-2 shadow-2xs">
+            <span class="text-cinnabar font-bold mt-0.5">●</span>
+            <div>
+              <strong>《快雪時晴帖》鑑藏題跋：</strong>臺北故宮藏王羲之法帖上之三希堂乾隆御印群及打油詩。
+            </div>
+          </li>
+          <li class="bg-white/75 p-3 rounded-lg border border-bordercream flex items-start gap-2 shadow-2xs">
+            <span class="text-cinnabar font-bold mt-0.5">●</span>
+            <div>
+              <strong>《清仁宗實錄》嘉慶朝卷宗：</strong>北京故宮藏嘉慶退回潦草奏摺之御筆硃批及抄沒和珅檔案。
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 燈箱彈出視窗 (Lightbox) -->
+  <div id="image-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/75 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300" onclick="closeLightbox()">
+    <div class="relative bg-papercard border-2 border-bordercream rounded-2xl max-w-xl w-full p-6 shadow-2xl overflow-hidden scale-90 transition-transform duration-300" onclick="event.stopPropagation()">
+      <button onclick="closeLightbox()" class="absolute top-3.5 right-3.5 w-8 h-8 rounded-full bg-stone-200 hover:bg-cinnabar hover:text-white text-stone-700 flex items-center justify-center text-sm font-bold transition-colors">
+        ✕
+      </button>
+      <div id="modal-container" class="w-full h-64 flex items-center justify-center overflow-hidden rounded-xl bg-amber-50/50 border border-bordercream mb-4 p-4">
+      </div>
+      <p id="modal-caption" class="text-xs sm:text-sm text-stone-800 font-serif leading-relaxed text-center px-2">
+      </p>
+    </div>
+  </div>
+
+  <!-- 點選直接回到「大清愛新覺羅家的吃瓜日常」懸浮快捷按鈕 -->
+  <button id="back-to-top" onclick="scrollToTop()" class="fixed bottom-6 right-6 z-40 bg-cinnabar hover:bg-red-800 text-white rounded-full p-3 shadow-xl border-2 border-imperial flex items-center justify-center group" title="奉旨回頂：回到「大清愛新覺羅家的吃瓜日常」">
+    <div class="flex flex-col items-center">
+      <span class="text-xs font-brush leading-tight font-black">回頂</span>
+      <span class="text-[10px] scale-75 group-hover:-translate-y-1 transition-transform">▲</span>
+    </div>
+  </button>
+
+  <!-- 頁腳 -->
+  <footer class="border-t border-bordercream bg-paperyellow/50 py-10 text-center text-xs text-stone-600 space-y-2 relative z-10">
+    <p class="font-serif font-bold text-stone-800 tracking-wider text-sm">
+      大清愛新覺羅家的吃瓜日常・歷史文化主題展頁
+    </p>
+    <p class="font-serif">
+      全頁動態由 Anime.js 驅動・皇帝肖像與文物插繪參照兩岸故宮珍貴典藏文獻
+    </p>
+    <div class="pt-2 text-[11px] text-stone-500 font-serif">
+      國立故宮博物院數位典藏參照與文史科普教學示範
+    </div>
+  </footer>
+
+  <script>
+    // 向量高解析資料集
+    const vectorAssets = {
+      'kangxi-portrait': `
+        <svg viewBox="0 0 120 120" class="w-52 h-52 drop-shadow-xl">
+          <radialGradient id="kx-lb-bg" cx="50%" cy="40%" r="65%">
+            <stop offset="0%" stop-color="#FFF8EC"/><stop offset="70%" stop-color="#EADBBE"/><stop offset="100%" stop-color="#CEB690"/>
+          </radialGradient>
+          <rect width="120" height="120" rx="60" fill="url(#kx-lb-bg)"/>
+          <path d="M10 120 Q30 84 60 84 Q90 84 110 120 Z" fill="#E6981E"/>
+          <path d="M22 120 C32 94 48 88 60 88 C72 88 88 94 98 120 Z" fill="#1C364D"/>
+          <ellipse cx="60" cy="56" rx="20" ry="26" fill="#FCE5CE"/>
+          <path d="M47 48 Q53 45 58 48 M62 48 Q67 45 73 48" stroke="#3D200E" stroke-width="2.2" fill="none"/>
+          <circle cx="52" cy="53" r="2.4" fill="#1C0E07"/><circle cx="68" cy="53" r="2.4" fill="#1C0E07"/>
+          <path d="M51 71 Q60 76 69 71" stroke="#4A2211" stroke-width="2" fill="none"/>
+          <path d="M52 73 Q60 86 68 73 Z" fill="#3D1D0D"/>
+          <ellipse cx="60" cy="42" rx="34" ry="7" fill="#181514"/>
+          <path d="M30 42 Q60 18 90 42 Q60 36 30 42 Z" fill="#B32417"/>
+          <circle cx="60" cy="9" r="4.2" fill="#F1C40F"/>
+        </svg>
+      `,
+      'yongzheng-portrait': `
+        <svg viewBox="0 0 120 120" class="w-52 h-52 drop-shadow-xl">
+          <radialGradient id="yz-lb-bg" cx="50%" cy="40%" r="65%">
+            <stop offset="0%" stop-color="#FBF2E8"/><stop offset="70%" stop-color="#E2CCA8"/><stop offset="100%" stop-color="#BF9E78"/>
+          </radialGradient>
+          <rect width="120" height="120" rx="60" fill="url(#yz-lb-bg)"/>
+          <path d="M10 120 Q30 82 60 82 Q90 82 110 120 Z" fill="#992318"/>
+          <ellipse cx="60" cy="55" rx="19" ry="26" fill="#FCE5CE"/>
+          <path d="M46 47 L56 48 M64 48 L74 47" stroke="#1F1008" stroke-width="2.6" stroke-linecap="round"/>
+          <ellipse cx="51" cy="52" rx="2.2" ry="1.5" fill="#140803"/><ellipse cx="69" cy="52" rx="2.2" ry="1.5" fill="#140803"/>
+          <path d="M51 70 Q60 68 69 70" stroke="#781E1E" stroke-width="2.4" stroke-linecap="round"/>
+          <path d="M53 72 Q60 82 67 72 Z" fill="#2E160A"/>
+          <ellipse cx="60" cy="41" rx="34" ry="7" fill="#161413"/>
+          <path d="M30 41 Q60 16 90 41 Q60 35 30 41 Z" fill="#992116"/>
+          <circle cx="60" cy="9" r="4" fill="#E5A93C"/>
+        </svg>
+      `,
+      'qianlong-portrait': `
+        <svg viewBox="0 0 120 120" class="w-52 h-52 drop-shadow-xl">
+          <radialGradient id="ql-lb-bg" cx="50%" cy="40%" r="65%">
+            <stop offset="0%" stop-color="#FFFDF5"/><stop offset="70%" stop-color="#ECD8B8"/><stop offset="100%" stop-color="#CAA87D"/>
+          </radialGradient>
+          <rect width="120" height="120" rx="60" fill="url(#ql-lb-bg)"/>
+          <path d="M10 120 Q30 82 60 82 Q90 82 110 120 Z" fill="#ECA223"/>
+          <ellipse cx="60" cy="55" rx="20" ry="26" fill="#FCE8D5"/>
+          <path d="M46 48 Q52 45 58 48 M62 48 Q68 45 74 48" stroke="#3D200E" stroke-width="2.2" fill="none"/>
+          <circle cx="52" cy="53" rx="2.4" fill="#1C0E07"/><circle cx="68" cy="53" rx="2.4" fill="#1C0E07"/>
+          <path d="M52 69 Q60 72 68 69" stroke="#BA261A" stroke-width="2"/>
+          <ellipse cx="60" cy="41" rx="34" ry="7" fill="#181514"/>
+          <path d="M30 41 Q60 16 90 41 Q60 35 30 41 Z" fill="#BA2215"/>
+          <circle cx="60" cy="7" r="4.2" fill="#FFD700"/>
+        </svg>
+      `,
+      'jiaqing-portrait': `
+        <svg viewBox="0 0 120 120" class="w-52 h-52 drop-shadow-xl">
+          <radialGradient id="jq-lb-bg" cx="50%" cy="40%" r="65%">
+            <stop offset="0%" stop-color="#F6FCF3"/><stop offset="70%" stop-color="#D2E4CE"/><stop offset="100%" stop-color="#A5C0A0"/>
+          </radialGradient>
+          <rect width="120" height="120" rx="60" fill="url(#jq-lb-bg)"/>
+          <path d="M10 120 Q30 84 60 84 Q90 84 110 120 Z" fill="#24513B"/>
+          <ellipse cx="60" cy="56" rx="20" ry="26" fill="#FCE5CE"/>
+          <path d="M46 48 L56 49 M64 49 L74 48" stroke="#2B160C" stroke-width="2.4" stroke-linecap="round"/>
+          <circle cx="51" cy="53" r="2.3" fill="#170F0A"/><circle cx="69" cy="53" r="2.3" fill="#170F0A"/>
+          <path d="M51 71 Q60 69 69 71" stroke="#3D200E" stroke-width="2.4" stroke-linecap="round"/>
+          <ellipse cx="60" cy="42" rx="34" ry="7" fill="#161715"/>
+          <path d="M30 42 Q60 17 90 42 Q60 36 30 42 Z" fill="#8C1D13"/>
+          <circle cx="60" cy="8" r="4" fill="#DDA520"/>
+        </svg>
+      `,
+      'mango-doc': `
+        <svg viewBox="0 0 100 80" class="w-64 h-52 drop-shadow-lg">
+          <rect width="100" height="80" rx="4" fill="#FCF7ED"/>
+          <rect x="8" y="10" width="46" height="60" rx="2" fill="#FFFDF9" stroke="#DEC8A2" stroke-width="1.2"/>
+          <line x1="15" y1="20" x2="44" y2="20" stroke="#7A6858" stroke-width="1.8"/>
+          <line x1="15" y1="28" x2="42" y2="28" stroke="#7A6858" stroke-width="1.8"/>
+          <line x1="15" y1="36" x2="38" y2="36" stroke="#7A6858" stroke-width="1.8"/>
+          <text x="16" y="60" font-family="'Ma Shan Zheng', cursive" font-size="9" fill="#BA261A">知道了</text>
+          <ellipse cx="74" cy="46" rx="18" ry="24" fill="#F39C12" transform="rotate(-15 74 46)"/>
+          <path d="M78 22 C68 18 64 8 72 6 C80 6 82 16 78 22 Z" fill="#27AE60"/>
+        </svg>
+      `,
+      'wig-tiger': `
+        <svg viewBox="0 0 160 120" class="w-80 h-60 drop-shadow-2xl">
+          <rect width="160" height="120" rx="8" fill="#EFE5D2"/>
+          <path d="M0 95 Q35 78 75 92 Q115 106 160 85 L160 120 L0 120 Z" fill="#B8A484"/>
+          <path d="M12 90 C18 68 38 65 52 75 C60 82 66 94 58 102 Z" fill="#E66A00"/>
+          <ellipse cx="50" cy="72" rx="13" ry="11" fill="#FFB347"/>
+          <line x1="56" y1="74" x2="118" y2="72" stroke="#4A5568" stroke-width="2.5"/>
+          <polygon points="56,71 44,74 56,77" fill="#CBD5E1"/>
+          <path d="M112 58 C108 72 106 88 122 88 C138 88 136 72 134 58 Z" fill="#1E3A8A"/>
+          <ellipse cx="124" cy="46" rx="9" ry="11" fill="#FCE7D0"/>
+          <path d="M111 44 C106 28 142 26 137 44 C144 50 142 62 134 65 C132 55 130 52 124 52 C118 52 116 55 114 65 C106 62 104 50 111 44 Z" fill="#D97706"/>
+          <text x="146" y="20" font-family="'Ma Shan Zheng', cursive" font-size="7" fill="#BA261A" text-anchor="middle">行樂</text>
+        </svg>
+      `,
+      'xue-tie': `
+        <svg viewBox="0 0 100 80" class="w-64 h-52 drop-shadow-lg">
+          <rect width="100" height="80" rx="3" fill="#E8DEC8"/>
+          <rect x="4" y="5" width="92" height="70" rx="2" fill="#F2E9D4" stroke="#D3C3A5" stroke-width="1.2"/>
+          <text x="36" y="32" font-family="'Noto Serif TC', serif" font-size="7.5" font-weight="900" fill="#1C1A19">快雪時晴</text>
+          <text x="36" y="46" font-family="'Noto Serif TC', serif" font-size="7.5" font-weight="900" fill="#1C1A19">佳想安善</text>
+          <text x="12" y="34" font-family="'Ma Shan Zheng', cursive" font-size="16" fill="#801515" font-weight="bold">神</text>
+          <rect x="10" y="44" width="13" height="13" fill="none" stroke="#BA261A" stroke-width="1.6"/>
+          <circle cx="82" cy="22" r="7.5" fill="none" stroke="#BA261A" stroke-width="1.6"/>
+        </svg>
+      `,
+      'heshen-tomb': `
+        <svg viewBox="0 0 100 80" class="w-64 h-52 drop-shadow-lg">
+          <rect width="100" height="80" fill="#EAF2E8" rx="4"/>
+          <ellipse cx="34" cy="62" rx="18" ry="9" fill="#F1C40F" stroke="#D68910" stroke-width="1.4"/>
+          <ellipse cx="66" cy="62" rx="18" ry="9" fill="#F1C40F" stroke="#D68910" stroke-width="1.4"/>
+          <rect x="22" y="14" width="56" height="20" rx="3" fill="#BA261A"/>
+          <text x="50" y="28" font-family="'Noto Serif TC', serif" font-size="10" font-weight="900" fill="#FFF" text-anchor="middle">查抄沒收</text>
+        </svg>
+      `,
+      'ruby-bowl': `
+        <svg viewBox="0 0 120 120" class="w-52 h-52 drop-shadow-xl">
+          <path d="M12 46 C12 88 40 102 60 102 C80 102 108 88 108 46 Z" fill="#BA261A"/>
+          <ellipse cx="60" cy="46" rx="48" ry="7" fill="#C0392B"/>
+          <rect x="44" y="102" width="32" height="7" rx="2" fill="#EAECEE"/>
+        </svg>
+      `,
+      'cimu-vase': `
+        <svg viewBox="0 0 120 120" class="w-52 h-52 drop-shadow-xl">
+          <rect x="44" y="8" width="32" height="8" rx="1" fill="#884EA0"/>
+          <path d="M34 42 Q16 60 22 82 Q30 105 60 105 Q90 105 98 82 Q104 60 86 42 Z" fill="#24517E"/>
+          <ellipse cx="60" cy="56" rx="36" ry="6" fill="#F39C12"/>
+          <ellipse cx="60" cy="68" rx="38" ry="6.5" fill="#E74C3C"/>
+          <rect x="42" y="105" width="36" height="7" rx="1" fill="#C0392B"/>
+        </svg>
+      `
+    };
+
+    // 捲動式故事敘事 (Scrollytelling) 邏輯與動畫管理
+    function initScrollytelling() {
+      const stepCards = document.querySelectorAll('.story-step-card');
+      if (!stepCards.length) return;
+
+      const actTitles = {
+        '1': '第一幕・萬里兼程馳送',
+        '2': '第二幕・乾清門親啟御鑰',
+        '3': '第三幕・深夜硃砂極限加班',
+        '4': '第四幕・奉旨回傳秘匣永存'
+      };
+
+      const stageColors = {
+        '1': '#F6EDE0', // 晨光暖黃
+        '2': '#F9EBE7', // 朝廷御紅淺底
+        '3': '#EDE8E1', // 子夜暗灰調微亮
+        '4': '#EAF3EC'  // 清晨松石微綠
+      };
+
+      // 觀察者設定：偵測哪個步驟進入視窗中心
+      const observerOptions = {
+        root: null,
+        rootMargin: '-20% 0px -25% 0px',
+        threshold: 0.35
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const step = entry.target.getAttribute('data-step');
+            if (step) activateStoryStep(step);
+          }
+        });
+      }, observerOptions);
+
+      stepCards.forEach(card => observer.observe(card));
+    }
+
+    function activateStoryStep(step) {
+      const actIndicator = document.getElementById('scroll-act-indicator');
+      const progressText = document.getElementById('scroll-progress-text');
+      const stage = document.getElementById('story-visual-stage');
+
+      const actTitles = {
+        '1': '第一幕・萬里兼程馳送',
+        '2': '第二幕・乾清門親啟御鑰',
+        '3': '第三幕・深夜硃砂極限加班',
+        '4': '第四幕・奉旨回傳秘匣永存'
+      };
+
+      const stageColors = {
+        '1': '#F6EDE0',
+        '2': '#F9EBE7',
+        '3': '#EDE8E1',
+        '4': '#EAF3EC'
+      };
+
+      if (actIndicator && actTitles[step]) {
+        actIndicator.innerText = actTitles[step];
+      }
+      if (progressText) {
+        progressText.innerText = `${step} / 4`;
+      }
+      if (stage && stageColors[step]) {
+        stage.style.backgroundColor = stageColors[step];
+      }
+
+      // 卡片高亮切換
+      document.querySelectorAll('.story-step-card').forEach(card => {
+        if (card.getAttribute('data-step') === String(step)) {
+          card.classList.add('border-cinnabar', 'shadow-xl', 'scale-[1.02]');
+          card.classList.remove('border-bordercream');
+        } else {
+          card.classList.remove('border-cinnabar', 'shadow-xl', 'scale-[1.02]');
+          card.classList.add('border-bordercream');
+        }
+      });
+
+      // 場景圖層淡入淡出（Anime.js）
+      for (let i = 1; i <= 4; i++) {
+        const sceneEl = document.getElementById(`scene-${i}`);
+        if (!sceneEl) continue;
+
+        if (String(i) === String(step)) {
+          sceneEl.classList.remove('pointer-events-none');
+          anime({
+            targets: sceneEl,
+            opacity: [0, 1],
+            scale: [0.88, 1],
+            duration: 500,
+            easing: 'easeOutCubic'
+          });
+        } else {
+          sceneEl.classList.add('pointer-events-none');
+          anime({
+            targets: sceneEl,
+            opacity: 0,
+            scale: 0.88,
+            duration: 350,
+            easing: 'easeInQuad'
+          });
+        }
+      }
+    }
+
+    // 手動點選進度按鈕跳轉至該步驟
+    function jumpToStoryStep(step) {
+      const targetCard = document.querySelector(`.story-step-card[data-step="${step}"]`);
+      if (targetCard) {
+        targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+      activateStoryStep(String(step));
+    }
+    window.jumpToStoryStep = jumpToStoryStep;
+
+    // 展開大清奏摺箱按鈕動態
+    function triggerOpenMemorialBox() {
+      const box = document.getElementById('box-unfolding-container');
+      const lockIcon = document.getElementById('box-lock-icon');
+      const arrowIcon = document.getElementById('box-arrow-icon');
+      
+      if (!box) return;
+
+      const isExpanded = box.getAttribute('data-expanded') === 'true';
+
+      if (!isExpanded) {
+        box.setAttribute('data-expanded', 'true');
+        box.classList.remove('h-0', 'opacity-0');
+        box.classList.add('h-auto', 'opacity-100');
+        if (lockIcon) lockIcon.innerText = '🔓';
+        if (arrowIcon) arrowIcon.innerText = '▲';
+
+        anime({
+          targets: box,
+          scaleY: [0, 1],
+          opacity: [0, 1],
+          duration: 600,
+          easing: 'easeOutElastic(1, .8)'
+        });
+
+        setTimeout(() => {
+          const sys = document.getElementById('system');
+          if (sys) sys.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 300);
+      } else {
+        box.setAttribute('data-expanded', 'false');
+        if (lockIcon) lockIcon.innerText = '🔐';
+        if (arrowIcon) arrowIcon.innerText = '▼';
+
+        anime({
+          targets: box,
+          opacity: [1, 0],
+          duration: 300,
+          easing: 'easeInQuad',
+          complete: () => {
+            box.classList.add('h-0', 'opacity-0');
+            box.classList.remove('h-auto', 'opacity-100');
+          }
+        });
+      }
+    }
+    window.triggerOpenMemorialBox = triggerOpenMemorialBox;
+
+    // 印章蓋印動效
+    function stampMemorial(emperorId) {
+      const seal = document.getElementById(`seal-${emperorId}`);
+      const card = document.getElementById(`card-${emperorId}`);
+      if (!seal) return;
+
+      anime.remove(seal);
+      anime({
+        targets: seal,
+        scale: [0, 1.2, 1],
+        rotate: [-35, -12],
+        opacity: [0, 1],
+        duration: 700,
+        easing: 'easeOutElastic(1, .6)'
+      });
+
+      if (card) {
+        anime({
+          targets: card,
+          translateY: [-3, 3, -1, 1, 0],
+          duration: 400,
+          easing: 'easeInOutQuad'
+        });
+      }
+    }
+    window.stampMemorial = stampMemorial;
+
+    // 數值條動畫
+    function triggerStatBars() {
+      document.querySelectorAll('.stat-bar').forEach(bar => {
+        const width = bar.getAttribute('data-width') || '80%';
+        anime({
+          targets: bar,
+          width: ['0%', width],
+          duration: 1200,
+          easing: 'easeOutExpo'
+        });
+      });
+    }
+
+    // 燈箱彈出視窗
+    function openSvgLightbox(key, caption) {
+      const modal = document.getElementById('image-modal');
+      const container = document.getElementById('modal-container');
+      const cap = document.getElementById('modal-caption');
+      if (!modal || !container || !cap) return;
+
+      container.innerHTML = vectorAssets[key] || '<p class="text-stone-500 font-serif">文物典藏圖形準備中...</p>';
+      cap.innerText = caption || '大清內廷文獻檔案插圖';
+
+      modal.classList.remove('opacity-0', 'pointer-events-none');
+      modal.classList.add('opacity-100');
+
+      const modalBox = modal.querySelector('div');
+      if (modalBox) {
+        modalBox.classList.remove('scale-90');
+        modalBox.classList.add('scale-100');
+        anime({
+          targets: modalBox,
+          scale: [0.92, 1],
+          opacity: [0, 1],
+          duration: 400,
+          easing: 'easeOutCubic'
+        });
+      }
+    }
+    window.openSvgLightbox = openSvgLightbox;
+
+    function closeLightbox() {
+      const modal = document.getElementById('image-modal');
+      if (!modal) return;
+      modal.classList.add('opacity-0', 'pointer-events-none');
+      modal.classList.remove('opacity-100');
+      const modalBox = modal.querySelector('div');
+      if (modalBox) {
+        modalBox.classList.remove('scale-100');
+        modalBox.classList.add('scale-90');
+      }
+    }
+    window.closeLightbox = closeLightbox;
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    window.scrollToTop = scrollToTop;
+
+    // 行動端水平滑動與圓點連動
+    function scrollMemorialCard(index) {
+      const container = document.getElementById('memorial-scroll-container');
+      if (!container) return;
+      const card = container.children[index];
+      if (card) {
+        card.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+      }
+    }
+    window.scrollMemorialCard = scrollMemorialCard;
+
+    function initMemorialCarousel() {
+      const container = document.getElementById('memorial-scroll-container');
+      const dotsContainer = document.getElementById('carousel-dots');
+      if (!container || !dotsContainer) return;
+
+      const dots = dotsContainer.querySelectorAll('button');
+      container.addEventListener('scroll', () => {
+        const scrollLeft = container.scrollLeft;
+        const width = container.offsetWidth * 0.75;
+        const activeIndex = Math.min(Math.round(scrollLeft / width), dots.length - 1);
+
+        dots.forEach((dot, idx) => {
+          if (idx === activeIndex) {
+            dot.classList.remove('bg-stone-300', 'w-2.5');
+            dot.classList.add('bg-cinnabar', 'w-6');
+          } else {
+            dot.classList.remove('bg-cinnabar', 'w-6');
+            dot.classList.add('bg-stone-300', 'w-2.5');
+          }
+        });
+      }, { passive: true });
+    }
+
+    // 頁面初次載入入場動效（Anime.js）
+    document.addEventListener('DOMContentLoaded', () => {
+      initMemorialCarousel();
+      anime.timeline({ easing: 'easeOutExpo' })
+        .add({
+          targets: '#hero-badge',
+          scale: [0.8, 1],
+          opacity: [0, 1],
+          duration: 650,
+        })
+        .add({
+          targets: '#hero-title',
+          translateY: [30, 0],
+          opacity: [0, 1],
+          duration: 850,
+        }, '-=400')
+        .add({
+          targets: '#hero-sub',
+          translateY: [20, 0],
+          opacity: [0, 1],
+          duration: 750,
+        }, '-=500')
+        .add({
+          targets: '#hero-avatars a',
+          scale: [0, 1],
+          opacity: [0, 1],
+          delay: anime.stagger(100),
+          duration: 650,
+        }, '-=400')
+        .add({
+          targets: '#hero-tags span',
+          translateY: [15, 0],
+          opacity: [0, 1],
+          delay: anime.stagger(50),
+          duration: 550,
+        }, '-=350')
+        .add({
+          targets: '.system-card',
+          translateY: [35, 0],
+          opacity: [0, 1],
+          delay: anime.stagger(120),
+          duration: 750,
+        }, '-=300')
+        .add({
+          targets: '.emperor-card',
+          translateY: [40, 0],
+          opacity: [0, 1],
+          delay: anime.stagger(150),
+          duration: 900,
+          complete: () => {
+            triggerStatBars();
+          }
+        }, '-=300');
+    });
+
+    document.addEventListener('keydown', (e) => {
+      const modal = document.getElementById('image-modal');
+      if (e.key === 'Escape' && modal && !modal.classList.contains('pointer-events-none')) {
+        closeLightbox();
+      }
+    });
+  </script>
+</body>
+</html>
